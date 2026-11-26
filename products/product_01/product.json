@@ -1,0 +1,54 @@
+{
+  "product_id": "product_01",
+  "asin": "B0HM458PW4",
+  "title": "Women's Embellished Heavy Georgette Maroon Anarkali Gown with Zari & Sequin Embroidery",
+  "brand": "Kalibherva",
+  "category": "Women's Ethnic & Indo-Western Couture / Wedding & Festival Wear",
+  "target_audience": "South Asian and global women seeking luxury ethnic couture for weddings, receptions, festivals, and high-end formal celebrations",
+  "color": {
+    "name": "Deep Regal Maroon / Rich Wine Burgundy",
+    "primary_hex": "#4A0E17",
+    "accent_hex": "#58111A",
+    "undertone": "Warm imperial burgundy with rich depth under studio lighting"
+  },
+  "fabric_blend": {
+    "primary": "Heavy Premium Faux Georgette",
+    "lining": "Micro-crepe full inner lining",
+    "texture_and_drape": "Fluid cascading drape, lightweight, billowing circular sweep, natural matte-sheen under 3200K key light"
+  },
+  "embroidery_and_zari": {
+    "zari_type": "Antique golden Zari threadwork and light-catching micro-sequins",
+    "yoke_detail": "Dense ornate curved bib featuring floral and paisley zari motifs with embedded micro-sequins",
+    "cuff_detail": "2-inch matching golden zari and sequin embroidered border on 3/4 sleeves",
+    "hem_detail": "Continuous golden zari border reinforcing multi-kali flared hem"
+  },
+  "dimensions": {
+    "length": "Floor-length (approx 56-58 inches / 142-147 cm)",
+    "kalis_count": 16,
+    "flare_sweep": "Circular sweep approx 3.8 to 4.2 meters",
+    "sleeves": "3/4 fitted sleeves (17-18 inches)",
+    "cuff_width": "2.0 inches",
+    "hem_clearance": "1.0 inch above floor line",
+    "aspect_ratio": "9:16 vertical catalog framing"
+  },
+  "construction": {
+    "front_neckline": "Modest round jewel neckline with dense antique golden zari embroidery and micro-sequin yoke bib",
+    "back_neckline": "Deep scooped U-neckline with delicate cord piping and functional rear dori ties with handcrafted golden latkan tassels",
+    "bodice": "Princess-cut fitted bodice extending to natural high waistline, structurally locking upper torso",
+    "skirt": "16 flowing flared kalis generating graceful vertical cascading folds",
+    "closures": "Concealed left-side zipper and rear functional dori ties"
+  },
+  "styling": {
+    "jewelry": "Sculptural antique gold jhumkas, delicate kundan bangles on right wrist, bare left wrist",
+    "footwear": "Soft cream leather square-toe flat sandals",
+    "environment": "Luminous warm champagne/ivory satin draped backdrop with graceful floor pooling",
+    "lighting": "3200K warm tungsten key light, soft diffused fill, subtle rim highlighting zari reflections without burnout"
+  },
+  "paths": {
+    "references": "products/product_01/references/",
+    "mockups": "products/product_01/mockups/",
+    "poses": "products/product_01/poses/",
+    "videos": "products/product_01/videos/",
+    "copy": "products/product_01/copy/"
+  }
+}

@@ -9,14 +9,13 @@ Last Updated: `2026-11-27 00:00 UTC`
 | Phase | Milestone | Status | Key Artifacts | Notes |
 | :--- | :--- | :---: | :--- | :--- |
 | **Setup** | Git repo setup & remote sync | **COMPLETED** | `main` branch | Connected to `https://github.com/Vishwa8/premium-fashion-ad-shoot.git` |
-| **Setup** | Base Image Assets | **COMPLETED** | `base/base_front.png`, `base/base_back.png` | Master high-res front and back clean plates |
-| **Setup** | Amazon garment asset extraction | **COMPLETED** | `generations/trials/dress_references/` | 5 high-res Amazon Kalibherva product images indexed |
-| **Setup** | Production folder structure | **COMPLETED** | `mockup/`, `poses/`, `videos/`, `generations/`, `docs/` | Fully scaffolded |
-| **Phase 1** | Isolated 4-View Dress 3D Mockup | **READY** | `mockup/` | Amazon reference extraction & 4-view dress turnaround |
-| **Phase 2** | Base + Garment Try-On (Locked Masters) | **READY** | `mockup/front_master.png`, `mockup/back_master.png` | Zero-drift try-on onto base plates |
-| **Phase 3** | Dual-Scale Master & 360 Turnaround Matrix | **READY** | `mockup/side_by_side_master.png`, `mockup/combine_views.png` | AI Samson character consistency contact sheet suite |
-| **Phase 4** | 5 Curated Editorial Catalogue Poses | **READY** | `poses/pose_01.png` to `poses/pose_05.png` | Conditioned strictly on locked masters |
-| **Phase 5** | 360 Turnaround & Final Commercial Reel | **READY** | `videos/` | Veo 3.1 turntable & final stitched commercial reel |
+| **Setup** | Base Image Assets | **COMPLETED** | `base/base_front.png`, `base/base_back.png` | Master high-res front and back clean plates (Parent single source of truth) |
+| **Setup** | Clean Parent-Child Architecture | **COMPLETED** | `base/`, `docs/`, `products/product_01/`, `.gitignore` | Strict separation of concerns, zero redundancy, single source of truth |
+| **Phase 1** | Isolated 4-View Dress 3D Mockup | **COMPLETED** | `products/product_01/mockups/dress_3d_*.png` | 4-view dress turnaround in 3D isolation |
+| **Phase 2** | Base + Garment Try-On (Locked Masters) | **COMPLETED** | `products/product_01/mockups/front_master.png`, `back_master.png` | Zero-drift try-on onto base plates |
+| **Phase 3** | Dual-Scale Master & 360 Turnaround Matrix | **COMPLETED** | `products/product_01/mockups/closeup_portrait_native.png`, `side_by_side_master.png`, `combine_views.png` | AI Samson character consistency suite |
+| **Phase 4** | 5 Curated Editorial Catalogue Poses | **READY** | `products/product_01/poses/` | Conditioned strictly on locked masters |
+| **Phase 5** | 360 Turnaround & Final Commercial Reel | **READY** | `products/product_01/videos/` | Veo 3.1 turntable & final stitched commercial reel |
 
 ---
 

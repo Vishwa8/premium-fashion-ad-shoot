@@ -55,12 +55,17 @@ An ultra-realistic, zero-drift fashion campaign and catalogue showcasing the Vir
 ---
 
 ## 3. Directory Layout
-- `base/`: Clean master front (`base_front.png`) and back (`base_back.png`) images.
-- `mockup/`: Isolated 3D dress mockup, front/back masters, dual-scale side-by-side, 360 matrix.
-- `poses/`: 5 curated editorial catalogue poses.
-- `videos/`: 360 turnarounds & final 25s commercial cut.
-- `generations/`: Cost tracker, run logs, prompts, and trial dress references.
-- `docs/`: Technical and operational blueprints.
+The repository follows a strict **Parent-Child architecture** with Single Source of Truth:
+- `base/`: Universal master influencer clean plates (`base_front.png`, `base_back.png`).
+- `docs/`: Technical specifications, production plans, run records, and modular reusable templates (`docs/templates/`).
+- `products/product_01/`: Self-contained child package for Kalibherva Maroon Anarkali Gown (`B0HM458PW4`) with modular chunks:
+  - `product.json`: Single source of truth for product specifications.
+  - `references/`: Raw Amazon reference photography.
+  - `mockups/`: Isolated 4-view 3D turnarounds, locked front/back masters, macro portrait, dual-scale sheet, contact sheet.
+  - `poses/`: 5 curated editorial catalogue poses.
+  - `videos/`: 360 turnarounds & final 25s commercial cut.
+  - `copy/`: Luxury catalog copy and prompt descriptors.
+- `.gitignore`: Exclusively at workspace root.
 
 ---
 
