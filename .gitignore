@@ -1,0 +1,22 @@
+# Environment & API keys
+.env
+.env.*
+*.key
+*.pem
+
+# Dependencies & Build
+node_modules/
+__pycache__/
+*.pyc
+
+# Operating System & IDE
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Large temporary cache files & scratchpads
+*.tmp
+*.log
+temp/
+scratch/
