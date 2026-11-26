@@ -30,9 +30,9 @@ The workspace is organized into a clean **Parent-Child architecture** with stric
 │
 ├── products/                       # Child Products (Separation of Concerns, Deserved Small Chunks)
 │   └── product_01/                 # Kalibherva Maroon Anarkali Gown (B0HM458PW4)
-│       ├── product.json            # Single source of truth for product specs (ASIN, colors, fabric, dimensions)
+│       ├── product.json            # Master product specification metadata
 │       ├── references/             # Raw vendor photography & detail crops (5 Amazon images)
-│       ├── mockups/                # 4-view 3D dress turnaround, locked masters, macro closeup, dual-scale sheet
+│       ├── mockup/                 # 4-view 3D dress turnaround, locked masters, macro closeup, dual-scale sheet
 │       │   ├── dress_3d_front.png
 │       │   ├── dress_3d_angle_45.png
 │       │   ├── dress_3d_profile_90.png
@@ -41,12 +41,17 @@ The workspace is organized into a clean **Parent-Child architecture** with stric
 │       │   ├── back_master.png
 │       │   ├── closeup_portrait_native.png
 │       │   ├── side_by_side_master.png
-│       │   └── combine_views.png
-│       ├── poses/                  # 5 curated zero-drift editorial catalogue poses
+│       │   ├── combine_views.png
+│       │   └── garment_4view_sheet_1k.png
+│       ├── description/            # Catalog description, garment technical descriptors & product info
+│       │   ├── Catalog_Description.txt
+│       │   ├── garment_desc.txt
+│       │   └── PRODUCT_INFO.md
+│       ├── poses/                  # Curated zero-drift editorial catalogue poses
 │       ├── videos/                 # 360 turnarounds, individual scene takes & commercial cut
-│       └── copy/                   # Product-specific luxury copy & 100-word prompt descriptor
-│           ├── Catalog_Description.txt
-│           └── garment_desc.txt
+│       └── logs/                   # Product run logs & cost tracking
+│           ├── cost_tracker.csv
+│           └── run_logs.json
 │
 └── .gitignore                      # Exclusively at workspace root (no nested .gitignore files)
 ```
@@ -54,5 +59,5 @@ The workspace is organized into a clean **Parent-Child architecture** with stric
 ## Principles
 1. **Single Source of Truth**: `base/` holds the canonical model identity plates. Product specs are stored solely in `products/product_XX/product.json`. Modular schemas and prompts live in `docs/templates/`.
 2. **Zero Duplication**: No copies of base plates, global templates, or cross-cutting tools exist inside child product packages.
-3. **Strict Separation of Concerns**: Each product package is completely self-contained in its deserved small chunks (`references/`, `mockups/`, `poses/`, `videos/`, `copy/`).
+3. **Strict Separation of Concerns**: Each product package is completely self-contained in its deserved small chunks (`references/`, `mockup/`, `poses/`, `videos/`, `description/`, `logs/`).
 4. **Single Root Gitignore**: Git exclusions are maintained exclusively at the workspace root `.gitignore`.

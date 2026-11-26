@@ -4,19 +4,35 @@
 *.key
 *.pem
 
-# Dependencies & Build
+# Dependencies & Package Managers
 node_modules/
-__pycache__/
-*.pyc
+.npm/
 
-# Operating System & IDE
+# Language & Runtime Caches
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.cache/
+
+# Operating System & System Files
 .DS_Store
 Thumbs.db
+desktop.ini
+*.swp
+*.swo
+*~
+*.bak
+
+# IDE & Editor Configurations
 .vscode/
 .idea/
 
-# Large temporary cache files & scratchpads
+# Large Temporary Cache Files & Scratchpads
 *.tmp
 *.log
 temp/
 scratch/
+tmp/

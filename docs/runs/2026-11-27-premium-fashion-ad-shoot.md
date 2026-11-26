@@ -6,25 +6,25 @@ Repository: `https://github.com/Vishwa8/premium-fashion-ad-shoot`
 Branch: `main`
 Orchestrator: `9router/vxoa/google/gemini-3.8-flash`
 
+## Standing Concurrency & Resource Constraint
+- **Strict Single-Subagent Rule**: Exactly **ONE** subagent at a time. No concurrent or parallel subagents. Serialize all tasks to protect local PC resources (RAM, CPU, I/O).
+
 ## Resume here
-- **State**: `products/product_01` reset to clean baseline (retaining only `product.json`, `references/`, and `copy/`).
-- **Mode**: User-guided step-by-step production.
-- **Awaiting**: Step 1 instructions from user.
+- **Step 1 Refined**: Perfected master 4-view garment reference sheet (`products/product_01/mockup/garment_4view_sheet_1k.png`) in landscape 1K (1376x768):
+  1. True invisible ghost mannequin with dark grey neck stump eliminated across all 4 views (front, 3/4 left, profile right, and back).
+  2. Hollow collar opening with natural wine maroon inner lining cavity shading on front, 3/4, and profile views.
+  3. Clean open scoop back with dori ties, bow loops, hanging cords, and gold latkan tassels floating over pure `#FFFFFF` background.
+  4. Purged all temporary/stale image assets from `mockup/`, retaining only the single locked master turnaround sheet.
+- **Awaiting**: User review of refined Step 1 and direction for Step 2.
+- **Active Subagents**: 0 (all idle, ready for next single dispatch).
 - **Branch**: `main`
-- **HEAD sha**: `21abc76`
+- **HEAD sha**: `c29099f`
 - **Open findings**: 0 critical, 0 high.
 
 ---
 
-## Workspace Inventory
+## Active Pipeline Progress
 
-| Path | Purpose |
-| :--- | :--- |
-| `base/` | Shared master influencer plates (`base_front.png`, `base_back.png`) |
-| `docs/templates/` | Reusable prompt schemas, camera angles, video directives, and copy generators |
-| `products/product_01/references/` | 5 raw vendor images for ASIN B0HM458PW4 |
-| `products/product_01/product.json` | Master product specification metadata |
-| `products/product_01/copy/` | Catalog description and prompt descriptors |
-| `products/product_01/mockups/` | Clean baseline, awaiting Step 1 |
-| `products/product_01/poses/` | Clean baseline |
-| `products/product_01/videos/` | Clean baseline |
+| Step | Task | Model | Concurrency | Status | Output / Artifact |
+| :--- | :--- | :--- | :---: | :---: | :--- |
+| **Step 1** | 4-View Ghost Mannequin Sheet (No Back Shawl, True Ghost Neck) | `9router/vxoa/google/gemini-3.8-flash` | 1 of 1 | **COMPLETED** | `products/product_01/mockup/garment_4view_sheet_1k.png` (1376x768) |
