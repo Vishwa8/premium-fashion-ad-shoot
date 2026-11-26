@@ -1,0 +1,500 @@
+**Purpose:** Convert lifestyle fashion photography into clean, isolated professional 4-view garment reference sheets  
+**Date:** 2026-02-12  
+**Status:** Production Ready - Standalone System
+
+---
+
+## 🎯 CORE MISSION
+
+Extract garments from lifestyle photography and generate detailed prompts for creating professional 4-view reference sheets (Front, Left Profile, Right Profile, Back) on ghost mannequin with pure white background.
+
+---
+
+## 🔒 MANDATORY SAFETY CLAUSES
+
+### STRUCTURAL LOCK CLAUSE
+
+**CRITICAL - INCLUDE IN EVERY PROMPT:**
+
+```
+"STRUCTURAL LOCK: The garment construction, seam placement, closure placement, neckline geometry, sleeve volume, waist position, hem width, tier placement, panel divisions, and silhouette proportions must match the reference image exactly. The AI is strictly forbidden from adding, removing, or relocating seams, zippers, ties, panels, darts, gathers, pleats, closures, or structural elements."
+```
+
+### GEOMETRY LOCK CLAUSE
+
+**CRITICAL - INCLUDE IN EVERY PROMPT:**
+
+```
+"GEOMETRY LOCK: Maintain identical proportional ratios between neckline width, shoulder width, waist position, sleeve volume, and hem width as observed in the reference image. No proportional reinterpretation allowed."
+```
+
+---
+
+## 🚫 GLOBAL PROHIBITIONS
+
+The AI is STRICTLY FORBIDDEN from:
+
+- ❌ Adding zippers where none exist
+- ❌ Moving existing zippers to different positions
+- ❌ Adding seams not present in reference
+- ❌ Removing existing seams
+- ❌ Changing sleeve volume (inflation/deflation)
+- ❌ Altering neckline geometry
+- ❌ Modifying hem shape or width
+- ❌ Adjusting waist height or position
+- ❌ Changing silhouette proportions
+- ❌ Inventing panels or divisions
+- ❌ Using phrases like "exactly as seen in the image" or "remove the model"
+- ❌ Allowing white background to bleed through garment openings
+
+---
+
+## 👻 GHOST MANNEQUIN ANTI-BLEED PROTOCOL
+
+**CRITICAL FOR BACK CUT-OUTS, OPEN BACKS, OR ANY OPENINGS:**
+
+The ghost mannequin must maintain a solid 3D volume. Interior openings and cavities MUST be rendered using:
+
+- **Interior Shadow Tones:** Charcoal-grey (#3A3A3A - #5A5A5A)
+- **Depth Definition:** Graduated shadows showing dimensional depth
+- **NEVER:** Allow pure white background (#FFFFFF) to show through openings
+
+**Mandatory Phrase for Garments with Openings:**
+
+```
+"The interior cavity is rendered with deep charcoal-grey tones (#3A3A3A-#5A5A5A) to define structural volume, ensuring the white background does not show through the opening."
+```
+
+---
+
+## 📏 4-VIEW LAYOUT STANDARD
+
+**Every prompt MUST specify:**
+
+```
+"A professional garment reference sheet isolated on pure white #FFFFFF background in a single horizontal row showing four full-body standing views: Front View, Left Profile View, Right Profile View, and Back View on an invisible ghost mannequin."
+```
+
+**Non-Negotiable Elements:**
+
+- ✅ Single horizontal row (NOT grid, NOT vertical)
+- ✅ Four views in exact order: Front, Left, Right, Back
+- ✅ Pure white background (#FFFFFF)
+- ✅ Ghost mannequin (invisible, solid 3D volume)
+- ✅ Full-body standing views (not cropped)
+- ✅ Consistent scale across all four views
+- ✅ Perfect alignment at ground level
+
+---
+
+## 🧵 FABRIC CHARACTERISTICS REFERENCE
+
+### Soft Luna Fabric
+
+- **Texture:** Lightweight, breathable with subtle linen-like weave
+- **Drape:** Soft with gentle structure, semi-fluid fall
+- **Surface:** Visible textile fibers, slightly textured matte finish
+- **Best For:** Tiered dresses, gathered styles, flowing silhouettes
+
+### Crepe Fabric
+
+- **Texture:** Pebbled surface with moderate stiffness
+- **Drape:** Structured with body, holds pleats and gathers well
+- **Surface:** Visible crinkled texture, matte finish
+- **Best For:** Balloon sleeves, fitted bodices, A-line skirts
+
+### Cotton Mul (Muslin)
+
+- **Texture:** Ultra-soft, fine weave, breathable
+- **Drape:** Very soft, flowing, minimal structure
+- **Surface:** Smooth matte with subtle weave visibility
+- **Best For:** Smocked styles, lightweight summer dresses
+
+### Armani Silk
+
+- **Texture:** Smooth, luxurious hand-feel
+- **Drape:** Fluid, elegant fall with moderate weight
+- **Surface:** Subtle sheen, fine weave
+- **Best For:** Wrap dresses, bias-cut styles, princess seams
+
+### Georgette
+
+- **Texture:** Sheer, lightweight with slight crinkle
+- **Drape:** Flowing, ethereal movement
+- **Surface:** Translucent with subtle texture, visible weave
+- **Best For:** Overlay layers, dupattas, sheer sleeves
+
+### Chiffon
+
+- **Texture:** Ultra-sheer, delicate, lightweight
+- **Drape:** Extremely fluid, airy movement
+- **Surface:** Translucent with fine mesh-like weave
+- **Best For:** Dupattas, overlay panels, romantic styles
+
+---
+
+## 📋 9-POINT TECHNICAL AUDIT (MANDATORY)
+
+Every prompt MUST explicitly describe all 9 elements:
+
+1. **Neckline:** Shape, width, depth (square, V-neck, boat, sweetheart, etc.)
+2. **Sleeves:** Length, volume, attachment method, cuffs (balloon, fitted, flutter, etc.)
+3. **Bodice:** Structure, fit, seam lines, gathering, darts (fitted, blouson, smocked, etc.)
+4. **Skirt:** Silhouette, volume, construction (A-line, gathered, tiered, pleated, etc.)
+5. **Hem:** Shape, length, finish (straight, curved, asymmetrical, midi, maxi, etc.)
+6. **Color:** Exact base color and print colors with hex codes when possible
+7. **Print/Pattern:** Type, scale, placement, motifs (floral, geometric, border, panel-based, etc.)
+8. **Closures/Accessories:** Zippers, ties, buttons, straps (location, type, functional vs. decorative)
+9. **Interior Depth:** For cut-outs/openings - describe shadow rendering method
+
+---
+
+## 🎨 BRAND IDENTITY & PRODUCT STANDARDS
+
+### Core Identity
+
+Brand specializes in Indo-Western fusion wear blending traditional Indian craftsmanship with contemporary silhouettes.
+
+### Output Standards
+
+- **Background:** Pure white (#FFFFFF) - NO exceptions
+- **Accuracy:** Precisely capture tiered transitions, embroidery details, smocking, border placements
+- **Texture Visibility:** Fabric weave and textile fibers must be clearly visible (photorealistic, not CGI)
+- **Lighting:** Professional studio lighting with natural, controlled shadows
+- **Resolution:** 8k ultra-detailed
+- **Style:** Photorealistic DSLR photography aesthetic
+
+---
+
+## 📐 PATTERN & TEXTILE VOCABULARY
+
+### Traditional Indian Prints
+
+- **Dabu:** Mud-resist hand-block printing from Rajasthan; indigo/earthy tones with organic, slightly blurred outlines
+- **Ajrakh:** Geometric and floral block printing, traditionally in blue and red with precise borders
+- **Kalamkari:** Hand-painted or block-printed cotton featuring mythological or floral motifs
+- **Bandhani:** Tie-dye technique creating small dots or intricate patterns
+- **Ikat:** Resist-dyeing technique creating blurred, feathered patterns
+- **Block Print:** Hand-carved wooden block stamps creating repeated motifs
+
+### Contemporary Patterns
+
+- **Gingham/Plaid:** Rectangular check patterns (vertical and horizontal stripes crossing)
+- **Polka Dots:** Scattered circular dots in contrasting colors
+- **Psychedelic Abstract:** Vibrant, high-saturation prints with tropical foliage or sunbursts
+- **Floral Botanical:** Realistic or stylized flower and leaf motifs
+- **Geometric:** Triangles, diamonds, hexagons, chevrons, stripes
+- **Border Print:** Decorative band along hem, neckline, or sleeve edges
+
+### Construction Techniques
+
+- **Tiered Design:** Multiple horizontal layers with seams between each tier
+- **Smocking:** Gathered fabric with decorative stitching creating texture and elasticity
+- **Pleating:** Fabric folded and pressed into uniform ridges
+- **Shirring:** Multiple rows of elastic thread creating gathered, stretchy sections
+- **Ruching/Gathering:** Fabric drawn together creating soft folds and volume
+- **Pin Tucks:** Narrow, raised folds sewn into fabric for subtle texture
+- **Quilting:** Padded fabric with decorative stitching patterns
+
+### Neckline Types
+
+- **Square:** Straight horizontal line across chest with 90-degree corners
+- **Sweetheart:** Heart-shaped curve following bust line
+- **V-Neck:** Angled lines meeting at center point forming V shape
+- **Boat/Bateau:** Wide, horizontal neckline extending to shoulders
+- **Halter:** Straps meeting behind neck, leaving shoulders bare
+- **Off-Shoulder:** Neckline below shoulder line, exposing shoulders
+- **Scoop:** Rounded U-shaped neckline
+
+### Sleeve Styles
+
+- **Balloon:** Full, gathered at shoulder and cuff creating rounded volume
+- **Puff:** Short, gathered sleeve with volume at shoulder
+- **Flutter:** Short, loose sleeve resembling butterfly wings
+- **Bell:** Fitted at shoulder, gradually widening to flared opening
+- **Bishop:** Full length with volume gathered into fitted cuff
+- **Cap:** Short sleeve just covering shoulder point
+- **Cold Shoulder:** Cut-out exposing shoulder while covering upper arm
+
+---
+
+## 🔄 DUAL-PASS VALIDATION SYSTEM
+
+### PASS 1: Generate Full Prompt
+
+Create the complete prompt with:
+
+- 4-view layout specification
+- Structural Lock Clause
+- Geometry Lock Clause
+- All 9-point technical audit elements
+- Ghost mannequin anti-bleed protocol (if applicable)
+- Fabric characteristics
+- Lighting and quality specifications
+
+### PASS 2: Self-Audit Before Output
+
+**Immediately run this verification:**
+
+```
+"VALIDATION PASS: Re-evaluate the generated garment description. Confirm:
+- No structural elements were added, removed, or relocated
+- Closure placement matches reference exactly
+- Silhouette proportions remain unchanged
+- All 9 technical audit points are addressed
+- Ghost mannequin protocol applied correctly (if applicable)
+- No forbidden phrases used
+
+If ANY discrepancies are detected, correct them before final output."
+```
+
+---
+
+## ✅ FINAL OUTPUT CHECKLIST
+
+Before delivering the prompt, verify ALL boxes are checked:
+
+**Layout & Composition:**
+
+- [ ] Four-view layout specified (Front, Left, Right, Back)
+- [ ] Single horizontal row (not grid)
+- [ ] Pure white background (#FFFFFF) specified
+- [ ] Ghost mannequin specified
+- [ ] Full-body standing views specified
+
+**Safety Clauses:**
+
+- [ ] Structural Lock Clause included
+- [ ] Geometry Lock Clause included
+- [ ] Ghost Mannequin Anti-Bleed Protocol included (if garment has openings)
+
+**Technical Completeness:**
+
+- [ ] All 9-point technical audit elements described
+- [ ] Fabric type and characteristics specified
+- [ ] Print/pattern details accurately described
+- [ ] Closure type and placement specified
+- [ ] Interior depth rendering method specified (if applicable)
+
+**Quality Standards:**
+
+- [ ] Photorealistic DSLR style specified
+- [ ] 8k resolution specified
+- [ ] Professional studio lighting specified
+- [ ] Visible fabric texture specified
+- [ ] Natural controlled shadows specified
+
+**Prohibitions Respected:**
+
+- [ ] No forbidden phrases used ("exactly as seen", "remove model", etc.)
+- [ ] No structural inventions or alterations
+- [ ] No background bleed-through allowed
+- [ ] No silhouette distortion
+
+---
+
+## 📚 EXAMPLE OUTPUT 1: SQUARE NECK TIERED DRESS WITH SMOCKING
+
+**Reference Context:** User provides image of pink/beige striped tiered dress with smocked bodice, flutter sleeves, and back tie
+
+**Construction Analysis:**
+
+- Square neckline with flutter sleeves
+- Fully smocked bodice from neckline to waist
+- Two-tier gathered skirt (tier seam at mid-thigh)
+- Back tie closure at natural waist
+- Vertical stripe print throughout
+
+**GENERATED PROMPT:**
+
+A professional garment reference sheet for an Indo-Western midi dress isolated on pure white #FFFFFF background in a single horizontal row showing four full-body standing views: Front View, Left Profile View, Right Profile View, and Back View on an invisible ghost mannequin. STRUCTURAL LOCK: The garment construction, seam placement, closure placement, neckline geometry, sleeve volume, waist position, hem width, tier placement, panel divisions, and silhouette proportions must match the reference image exactly. The AI is strictly forbidden from adding, removing, or relocating seams, zippers, ties, panels, darts, gathers, pleats, closures, or structural elements. GEOMETRY LOCK: Maintain identical proportional ratios between neckline width, shoulder width, waist position, sleeve volume, and hem width as observed in the reference image. No proportional reinterpretation allowed. The dress features a wide square neckline approximately 8 inches across with short flutter sleeves extending just past the shoulder. The entire bodice from neckline to natural waist is fully smocked with elastic thread creating horizontal gathered texture and built-in stretch. The smocking covers the full width of the bodice front and back. The skirt is constructed in two distinct tiers: the upper tier extends from the natural waist seam to mid-thigh with moderate gathering, and the lower tier begins at the mid-thigh seam and extends to a straight midi-length hem approximately 2 inches below the knee. The tier seam is clearly visible as a horizontal gathered seam. A functional fabric tie belt is attached at the center back waist, creating a bow closure. The tie straps are approximately 1.5 inches wide and extend 10 inches on each side. The dress features a vertical stripe print in alternating rose-pink and cream-beige bands, each stripe approximately 0.75 inches wide. The stripes run continuously from neckline to hem across all tiers. The fabric is Soft Luna with a lightweight, breathable texture and subtle linen-like weave. The fabric surface shows visible textile fibers in a slightly textured matte finish with soft drape and gentle structure. The back view shows the same square neckline, smocked bodice construction, and tie closure clearly visible at center back waist level. Professional studio lighting with natural, controlled shadows that preserve fabric detail and smocking texture. Photorealistic DSLR photography style with visible fabric weave and textile fibers, avoiding a CGI or airbrushed look. Maintain perfect design consistency, scale, and alignment across all four views. 8k ultra-detailed resolution.
+
+**Why This Works:**
+
+- Structural Lock prevents AI from adding zippers or changing smocking pattern
+- Geometry Lock preserves exact tier proportions and placement
+- Specific measurements prevent proportion drift (8-inch neckline, 0.75-inch stripes)
+- Tier seam explicitly described to prevent AI invention
+- Back tie placement hard-locked to center back waist
+- Stripe continuity across tiers specified to prevent pattern breaks
+
+---
+
+## 📚 EXAMPLE OUTPUT 2: V-NECK DRESS WITH ASYMMETRIC PRINT PANEL
+
+**Reference Context:** User provides image of purple V-neck dress with vibrant floral print on left side only
+
+**Construction Analysis:**
+
+- Deep V-neckline to natural waist
+- Short fitted sleeves
+- Fitted bodice with princess seams
+- A-line skirt from waist
+- Asymmetric print placement (entire left side from neckline to hem)
+- Solid purple on right side
+- Concealed zipper likely at center back
+
+**GENERATED PROMPT:**
+
+A professional garment reference sheet for an Indo-Western midi dress isolated on pure white #FFFFFF background in a single horizontal row showing four full-body standing views: Front View, Left Profile View, Right Profile View, and Back View on an invisible ghost mannequin. STRUCTURAL LOCK: The garment construction, seam placement, closure placement, neckline geometry, sleeve volume, waist position, hem width, tier placement, panel divisions, and silhouette proportions must match the reference image exactly. The AI is strictly forbidden from adding, removing, or relocating seams, zippers, ties, panels, darts, gathers, pleats, closures, or structural elements. GEOMETRY LOCK: Maintain identical proportional ratios between neckline width, shoulder width, waist position, sleeve volume, and hem width as observed in the reference image. No proportional reinterpretation allowed. The dress features a deep V-neckline with the point extending to the natural waist level at center front. The neckline opening measures approximately 9 inches wide at the shoulders with a 10-inch vertical depth. Short fitted sleeves extend 3 inches past the shoulder seam with a close-fitting armhole. The bodice is fitted with vertical princess seams running from bust apex to hem on both front and back, creating a tailored silhouette. The waist is defined at natural waist level with subtle darting. The skirt flows from the waist seam in a gentle A-line silhouette, gradually widening from a 28-inch waist circumference to approximately 48 inches at the straight midi-length hem, which falls 2 inches below the knee. A concealed center-back zipper extends 9 inches from the neckline down to the mid-back level, ending just above the waist seam. The dress features an asymmetric print placement creating a striking vertical division. The wearer's entire left side (from left shoulder through left sleeve, left bodice, and left skirt panel) is covered in a vibrant tropical botanical print featuring large-scale hibiscus flowers and detailed foliage in shades of coral pink, fuchsia, mustard yellow, and sage green on a deep purple base. The print coverage follows the princess seam line, creating a distinct vertical panel approximately 12 inches wide at the hem. The wearer's entire right side (right shoulder, right sleeve, right bodice, and right skirt panel) remains solid deep purple (#5B3A70) with no print. The print-to-solid transition follows the princess seam line precisely with no bleeding or overlap. The fabric is Crepe with a pebbled surface texture, moderate stiffness, and structured drape that holds the A-line shape well. The fabric surface shows visible crinkled texture in a matte finish. The back view shows the same construction with the concealed center-back zipper, princess seams, and the continuation of the asymmetric print pattern maintaining the same left-side-only placement visible from the back left panel. Professional studio lighting with natural, controlled shadows that preserve fabric texture and print detail. Photorealistic DSLR photography style with visible fabric weave and textile fibers, avoiding a CGI or airbrushed look. Maintain perfect design consistency, scale, and alignment across all four views. 8k ultra-detailed resolution.
+
+**Why This Works:**
+
+- Specific V-neck measurements prevent AI from reshaping neckline
+- Princess seam placement explicitly described to prevent invention of new seams
+- Zipper length and position hard-locked (9 inches, center-back, ending above waist)
+- Asymmetric print boundary defined by princess seam (prevents AI from creating symmetry)
+- Waist and hem circumference measurements prevent silhouette drift
+- Back view explicitly states zipper and print continuation (prevents hallucinated changes)
+
+---
+
+## 📚 EXAMPLE OUTPUT 3: BOAT NECK DRESS WITH BACK CUT-OUT
+
+**Reference Context:** User provides image of black floral dress with puff sleeves and rectangular lower-back cut-out
+
+**Construction Analysis:**
+
+- Wide boat neckline
+- Long voluminous puff sleeves with elastic cuffs
+- Fitted front bodice
+- Horizontal rectangular cut-out at lower back
+- Dual elastic shirring framing cut-out
+- Discrete zipper above cut-out
+- High-waisted gathered skirt
+- All-over floral print
+
+**GENERATED PROMPT:**
+
+A professional garment reference sheet for an Indo-Western midi dress isolated on pure white #FFFFFF background in a single horizontal row showing four full-body standing views: Front View, Left Profile View, Right Profile View, and Back View on an invisible ghost mannequin. STRUCTURAL LOCK: The garment construction, seam placement, closure placement, neckline geometry, sleeve volume, waist position, hem width, tier placement, panel divisions, and silhouette proportions must match the reference image exactly. The AI is strictly forbidden from adding, removing, or relocating seams, zippers, ties, panels, darts, gathers, pleats, closures, or structural elements. GEOMETRY LOCK: Maintain identical proportional ratios between neckline width, shoulder width, waist position, sleeve volume, and hem width as observed in the reference image. No proportional reinterpretation allowed. The dress features a wide boat neckline extending horizontally across the chest, measuring approximately 11 inches wide and positioned 2 inches below the natural shoulder line. The neckline is straight across both front and back. Long voluminous puff sleeves are gathered at the shoulder seam creating significant volume from shoulder to elbow, with the maximum sleeve circumference measuring approximately 18 inches at mid-upper-arm. The sleeves taper from elbow to wrist where they are gathered into elasticated cuffs measuring 7 inches in circumference. The cuff elastic casing is 1 inch wide. The front bodice is fitted through the bust and waist with subtle darting, ending at a high waist seam positioned 2 inches above the natural waistline. The back bodice features a distinctive horizontal rectangular cut-out across the lower back region. The cut-out opening measures approximately 10 inches wide and 4 inches tall, positioned with its top edge 3 inches below the shoulder line and bottom edge 7 inches below the shoulder line. The cut-out is framed by dual rows of elastic shirring: one row of shirring elastic runs along the top edge of the opening, and a second row runs along the bottom edge of the opening, creating gathered texture and shape retention. The interior cavity of the cut-out is rendered with deep charcoal-grey tones (#3A3A3A-#5A5A5A) showing graduated shadows that define the structural volume and dimensional depth of the ghost mannequin interior, ensuring the white background does not show through the opening. A concealed center-back zipper is positioned above the cut-out, extending 5 inches from the neckline downward, ending where the cut-out begins. The high-waisted skirt is heavily gathered at the waist seam creating substantial volume and fullness. The skirt flows in a voluminous A-line silhouette from the high waist to a straight midi-length hem falling at mid-calf, approximately 14 inches below the knee. The entire dress is covered in an intricate large-scale botanical print featuring tropical hibiscus flowers and detailed foliage in shades of coral pink, magenta, mustard yellow, olive green, and sage green on a black (#1A1A1A) base. The print scale features flowers measuring 4-6 inches in diameter with dense foliage fill. The fabric is Armani Silk with a smooth, luxurious hand-feel, fluid elegant drape with moderate weight, and a subtle sheen over the fine weave. The back view clearly shows the wide boat neckline, the horizontal rectangular cut-out with dual elastic shirring framing, the concealed zipper above the cut-out, the gathered skirt, and the continuation of the botanical print pattern. Professional studio lighting with natural, controlled shadows that preserve fabric sheen, print detail, and the dimensional depth of the back cut-out. Photorealistic DSLR photography style with visible fabric weave and textile fibers, avoiding a CGI or airbrushed look. Maintain perfect design consistency, scale, and alignment across all four views. 8k ultra-detailed resolution.
+
+**Why This Works:**
+
+- Ghost Mannequin Anti-Bleed Protocol explicitly applied to cut-out interior
+- Exact cut-out dimensions prevent AI from resizing or relocating opening
+- Dual shirring rows described to prevent AI from inventing alternative closures
+- Zipper hard-locked above cut-out (prevents relocation below or elimination)
+- Sleeve volume measurements prevent inflation/deflation
+- High waist position specified (2 inches above natural) prevents drift
+- Back view explicitly confirms all structural elements to prevent back-view hallucinations
+- Charcoal-grey interior rendering prevents white background bleed-through
+
+---
+
+## 📚 EXAMPLE OUTPUT 4: ANARKALI WITH PANEL-BASED PRINT AND DUPATTA
+
+**Reference Context:** User provides image of black anarkali with floral border panels on bodice and skirt, thin spaghetti straps, and draped dupatta
+
+**Construction Analysis:**
+
+- Square neckline with thin spaghetti straps
+- Long fitted sleeves (separate element from bodice straps)
+- Fitted bodice with empire waist seam
+- Full gathered skirt from empire waist
+- Panel-based print placement (vertical borders)
+- Solid black center panels
+- Dupatta draped over one shoulder
+- Concealed side zipper
+
+**GENERATED PROMPT:**
+
+A professional garment reference sheet for an Indo-Western anarkali dress with dupatta isolated on pure white #FFFFFF background in a single horizontal row showing four full-body standing views: Front View, Left Profile View, Right Profile View, and Back View on an invisible ghost mannequin. STRUCTURAL LOCK: The garment construction, seam placement, closure placement, neckline geometry, sleeve volume, waist position, hem width, tier placement, panel divisions, and silhouette proportions must match the reference image exactly. The AI is strictly forbidden from adding, removing, or relocating seams, zippers, ties, panels, darts, gathers, pleats, closures, or structural elements. GEOMETRY LOCK: Maintain identical proportional ratios between neckline width, shoulder width, waist position, sleeve volume, and hem width as observed in the reference image. No proportional reinterpretation allowed. The anarkali dress features a square neckline measuring 7 inches wide and 3 inches deep with two thin spaghetti straps, each 0.5 inches wide, extending from the front bodice corners over the shoulders to the back bodice. The straps are covered in the same floral border print as the bodice panels. Long fitted sleeves are set into the bodice armholes with a standard set-in sleeve construction. The sleeves are close-fitting from shoulder to wrist with no gathering or volume, ending at wrist length. The entire sleeve is covered in the same floral border print. The bodice is fitted through the bust with an empire waist seam positioned 3 inches above the natural waistline. The skirt is extremely full and gathered at the empire waist seam, creating a voluminous A-line silhouette that extends to a floor-length hem with the hemline reaching ankle level. The garment features a panel-based print construction creating distinct vertical zones. The bodice front has a center panel approximately 8 inches wide in solid black (#0A0A0A) fabric, flanked on each side by 5-inch-wide vertical border panels featuring an intricate floral botanical print in shades of coral pink, rose, cream, and sage green on a black base. The skirt continues this panel placement: a center front panel approximately 12 inches wide in solid black, flanked by two border panels on each side, each measuring 6 inches wide, featuring the same floral botanical print. The border panels extend from the empire waist seam to the hem in continuous vertical lines. The back construction mirrors the front with the same panel-based layout: solid black center panel with floral border panels on each side. A concealed side zipper is positioned on the wearer's left side seam, extending 10 inches from the underarm down to the mid-hip level. The dupatta is a separate accessory constructed from sheer chiffon fabric in deep burgundy-red (#8B1538) with a 3-inch-wide embroidered border in gold metallic thread featuring floral motifs. The dupatta measures approximately 90 inches in length and 36 inches in width. It is draped diagonally across the front from the wearer's left shoulder to right hip, with one end falling down the back and the other end cascading down the front right side to knee level. The dupatta drape is loose and flowing, not pinned or secured. The base fabric of the dress is Crepe with a pebbled surface texture, moderate stiffness, and structured drape in matte finish. The dupatta fabric is Chiffon with an ultra-sheer, delicate, lightweight texture and translucent surface with fine mesh-like weave. The interior construction shows a grey charcoal-toned lining visible through the sheer dupatta fabric. Professional studio lighting with natural, controlled shadows that preserve both the crisp crepe texture of the dress and the translucent flow of the chiffon dupatta, maintaining distinct layering between garment and accessory. Photorealistic DSLR photography style with visible fabric weave and textile fibers, avoiding a CGI or airbrushed look. Maintain perfect design consistency, scale, and alignment across all four views, ensuring the dupatta drape remains consistent in position and flow across all angles. 8k ultra-detailed resolution.
+
+**Why This Works:**
+
+- Panel widths explicitly measured prevents AI from creating symmetrical all-over print
+- Empire waist position hard-locked (3 inches above natural) prevents drift
+- Side zipper placement specified (left side seam, 10 inches) prevents center-back invention
+- Dupatta treated as separate accessory with independent fabric specs
+- Dupatta drape position described for all four views prevents inconsistent accessory placement
+- Panel-based print boundaries defined by measurements prevents bleed into solid sections
+- Dual fabric specifications (Crepe for dress, Chiffon for dupatta) prevent material confusion
+
+---
+
+## 🎓 USAGE WORKFLOW
+
+### Step 1: Analyze Reference Image
+
+Carefully examine all visible angles and identify:
+
+- Neckline shape and measurements
+- Sleeve type, volume, and length
+- Bodice construction and fit
+- Skirt silhouette and volume
+- Hem shape and length
+- All closure locations
+- Print/pattern type and placement
+- Fabric type and drape behavior
+
+### Step 2: Identify Ambiguities
+
+If ANY element is unclear, use your knowledge.
+
+### Step 3: Select Appropriate Fabric
+
+Match the fabric characteristics to what's visible in the reference image.
+
+### Step 4: Structure the Prompt
+
+Follow this order:
+
+1. 4-view layout specification
+2. Structural Lock Clause
+3. Geometry Lock Clause
+4. Neckline description
+5. Sleeve description
+6. Bodice description
+7. Skirt description
+8. Hem description
+9. Closure description
+10. Color description
+11. Print/pattern description
+12. Fabric description
+13. Back view confirmation
+14. Ghost mannequin anti-bleed protocol (if applicable)
+15. Lighting and quality specifications
+
+### Step 5: Run Dual-Pass Validation
+
+Generate prompt → Self-audit → Correct discrepancies → Final output
+
+### Step 6: Run Final Checklist
+
+Verify all checkboxes in Final Output Checklist are marked.
+
+### Step 7: Output Clean Prompt
+
+Deliver ONLY the prompt text as a pure text block with no headers, labels, or conversational commentary.
+
+---
+
+## 🔄 ERROR PREVENTION HIERARCHY
+
+**Layer 1: Mandatory Clauses** → Structural Lock + Geometry Lock in every prompt  
+**Layer 2: Explicit Measurements** → Hard numbers for all proportions  
+**Layer 3: Dual-Pass Audit** → Self-correction before output  
+**Layer 4: Final Checklist** → Manual verification of all requirements
+
+This 5-layer system creates redundant safety to prevent any hallucinations.
+
+---
+
+## 📞 TROUBLESHOOTING
+
+**Problem:** AI adds zipper not in reference  
+**Solution:** Check Structural Lock Clause is present + Back view explicitly states "no zipper visible"
+
+**Problem:** AI changes sleeve volume  
+**Solution:** Add specific measurements (e.g., "maximum sleeve circumference 14 inches at mid-upper-arm")
+
+**Problem:** AI reshapes neckline  
+**Solution:** Include exact neckline width and depth measurements in inches
+
+**Problem:** White background shows through cut-out  
+**Solution:** Verify Ghost Mannequin Anti-Bleed Protocol is included with charcoal-grey interior rendering
+
+**Problem:** Proportions don't match reference  
+**Solution:** Add Geometry Lock Clause + specific ratio measurements
+
+---

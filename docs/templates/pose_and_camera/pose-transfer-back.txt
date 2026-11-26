@@ -1,0 +1,7 @@
+Use the base image 1 & image 2 as the identity, body, lighting, and scene source of truth. Replace only the model's pose & expression with the uploaded reference (image 3) keeping everything else the same.
+
+Preserve the exact same woman, face, skin tone, hair, jewelry, hands, body proportions, cream satin draped background, floor drape, and sandals.
+
+Transfer the pose (With the curves of body like c, s or etc...), camera angle, framing & expression faithfully as in the image 3 exactly.
+
+Do not change identity, hairstyle, background, lighting, composition, or accessories. Photorealistic fashion catalog image.

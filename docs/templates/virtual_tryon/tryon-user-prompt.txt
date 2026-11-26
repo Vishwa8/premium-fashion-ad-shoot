@@ -1,0 +1,7 @@
+Adapt the system prompt to use the image 2 as garment and create a similar prompt. After the "Transfer the garment faithfully: __New_garment" add the precise garment details keeping everything else the same - "Use the base image as the identity, pose, body, lighting, and scene source of truth. Replace only the masked model's red dress with the uploaded green dress reference keeping everything else the same.
+
+Preserve the exact same woman, face, skin tone, hair, expression, jewelry, hands, pose, body proportions, camera angle, full-body framing, cream satin draped background, floor drape, and sandals.
+
+Transfer the garment faithfully: [[__New_garment]]
+
+Do not change identity, hairstyle, background, lighting, composition, or accessories. Photorealistic fashion catalog image."

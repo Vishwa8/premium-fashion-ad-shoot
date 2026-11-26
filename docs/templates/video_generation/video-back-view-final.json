@@ -1,0 +1,104 @@
+{
+  "task": "identity_locked_fashion_video_generation_back_view",
+  "version": "1.2",
+  "goal": "Create a photorealistic premium fashion video using the back-view result image as the primary visual source of truth, with extremely strict back-view consistency, subtle motion, stable hair details, stable garment back-construction, and a bright premium editorial look. Strictly no face or side profile reveal.",
+  "references": {
+    "primary_result_reference": "image 1"
+  },
+  "reference_priority": {
+    "identity_source_of_truth": "primary_result_reference",
+    "hair_source_of_truth": "primary_result_reference",
+    "garment_source_of_truth": "primary_result_reference",
+    "scene_source_of_truth": "primary_result_reference",
+    "lighting_source_of_truth": "primary_result_reference",
+    "pose_source_of_truth": "primary_result_reference"
+  },
+  "engine_specs": {
+    "model": "Veo 3.1",
+    "rendering_mode": "Photorealistic premium fashion commercial",
+    "camera_profile": "High-end digital cinema fashion capture, clean color science, bright studio exposure",
+    "target_fps": 24,
+    "total_duration": "6.0s",
+    "aspect_ratio": "9:16",
+    "temporal_coherence": "Maximum strict frame-to-frame consistency",
+    "start_frame_source": "primary_result_reference",
+    "reference_mode": "Single-image locked video generation"
+  },
+  "character_definition": {
+    "identity": {
+      "source": "primary_result_reference",
+      "instruction": "Use identity_source_of_truth as the source for the model's rear-view identity. Preserve the exact hair length, wavy texture, dark brown color, and the way it falls over the shoulders. Strictly no face reveal.",
+      "view_lock": "Full back-view throughout the entire duration"
+    },
+    "attire": {
+      "source": "primary_result_reference",
+      "instruction": "Use garment_source_of_truth as the exact source of truth for the red dress back-construction. Preserve the exact mid-length sleeves, the seam lines on the back of the bodice, the solid deep red color, the fabric texture, and the full A-line skirt silhouette."
+    },
+    "accessories": {
+      "source": "primary_result_reference",
+      "instruction": "Maintain the tan/nude flat sandals exactly as shown. Do not add any jewelry that would require a front or side view to be visible."
+    }
+  },
+  "environment_setup": {
+    "source": "primary_result_reference",
+    "location_type": "Bright premium editorial fabric set",
+    "backdrop_instruction": "Use scene_source_of_truth as the exact source of truth for the off-white / ivory luminous satin-like fabric background. Maintain the large folds and premium sheen.",
+    "lighting_instruction": "Use lighting_source_of_truth for bright, soft, wrap-around lighting that highlights the texture of the red dress and the sheen of the background fabric without creating harsh shadows.",
+    "set_elements": "No extra props, clean minimal luxury setup"
+  },
+  "motion_safety_rules": {
+    "body_orientation": "Keep the model strictly back-facing. The model should never rotate more than 5 degrees, ensuring the face and side profiles remain completely hidden.",
+    "turn_limit": "Strictly no turns, no spins, no side reveals, and no head-turning that would reveal the jawline or profile.",
+    "identity_lock": "Maintain the hair pattern and shoulder width consistently from hair_source_of_truth. No morphing of hair texture or dress color.",
+    "garment_lock": "Do not introduce any front-side elements. Keep the back seams and sleeve length identical to garment_source_of_truth in every frame.",
+    "background_lock": "Keep the same ivory satin-like background style and arrangement from scene_source_of_truth.",
+    "motion_style": "Subtle and elegant: minimal breathing, gentle swaying of the skirt hem, and soft hair movement."
+  },
+  "motion_plan": {
+    "core_goal": "Maintain a high-fashion back-view presentation with minimal, high-end movement and zero profile reveal.",
+    "camera_motion": "Very slow subtle push-in or extremely slight vertical jib move to enhance the premium feel.",
+    "subject_motion": "Tiny natural breathing, subtle weight shift between feet, very slight finger movement in the hair, and gentle swaying of the dress hem.",
+    "hair_motion": "Very slight natural swaying of the wavy hair strands against the back of the dress."
+  },
+  "timeline_sequence": [
+    {
+      "time": "0.0s-2.0s",
+      "action": "Hold the anchor pose from pose_source_of_truth. Right hand remains in the hair. Maximum consistency with the source image."
+    },
+    {
+      "time": "2.0s-4.0s",
+      "action": "The model performs a very slight weight shift. The dress hem moves softly. The right hand makes a micro-adjustment in the hair. Camera performs a slow, cinematic push-in."
+    },
+    {
+      "time": "4.0s-6.0s",
+      "action": "The hand slowly begins to relax downwards but stays in the rear-view silhouette. Hair sways gently. The video ends in a stable back-view pose with the same lighting and color balance as lighting_source_of_truth."
+    }
+  ],
+  "negative_prompt_shorthand": "face, eyes, nose, mouth, profile, side view, turning around, front view, cleavage, necklace, earrings, face morphing, identity drift, garment redesign, flickering, jitter, low quality, messy hair, changing dress color, extra limbs, hand distortion, background shifting, aggressive motion, sudden movements",
+  "technical_overrides": {
+    "consistency_weight": "maximum",
+    "identity_lock_strength": "maximum",
+    "garment_lock_strength": "maximum",
+    "back_view_lock": "absolute",
+    "motion_intensity": "very low",
+    "wind_intensity": "subtle"
+  },
+  "output_constraints": {
+    "must_keep": [
+      "strict back view only",
+      "zero face visibility",
+      "exact hair texture and dark brown color from identity_source_of_truth",
+      "exact red dress silhouette and back seams",
+      "exact accessories from accessories_source_of_truth",
+      "exact bright editorial look from lighting_source_of_truth",
+      "exact ivory satin background from scene_source_of_truth"
+    ],
+    "must_avoid": [
+      "any reveal of the face or profile",
+      "rotating the subject",
+      "changing the hair length",
+      "altering the dress color",
+      "jittery camera work"
+    ]
+  }
+}

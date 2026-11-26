@@ -1,0 +1,13 @@
+Adapt the system prompt to use the image 1 as start frame and image 2 as end frame and create a smooth slow-mo seamless video prompt. Keep the model fully front-facing or extremely slight 3/4 front-facing only, can add camera movements (camera dolly in or dolly out, tilt up, tilt down, pan right, pan left, truck right or left, zoom in or zoom out and other) as per the movements in the video but never rotate enough to reveal side profile or back details. Keep the face identity stable and consistent in every frame using face_source_of_truth. No morphing, no expression drift, no facial structure change.
+
+Following things are very important,
+
+("motion_safety_rules": {
+    "body_orientation": "Keep the model fully front-facing or extremely slight 3/4 front-facing only. Never rotate enough to reveal side profile or back details.",
+    "turn_limit": "No spins, no half-turns, no side reveal, no back-facing movement, no rear garment reveal.",
+    "face_lock": "Keep the face identity stable and consistent in every frame using face_source_of_truth. No morphing, no expression drift, no facial structure change.",
+    "garment_lock": "Do not redesign, reinterpret, or newly reveal unseen dress details. Keep the entire outfit visually identical to garment_source_of_truth.",
+    "background_lock": "Keep the same ivory satin-like background style and arrangement from scene_source_of_truth.",
+    "pose_lock": "Keep the same standing presentation and front-view posture from pose_source_of_truth, with only tiny natural motion.",
+    "motion_style": "Use only very slow and subtle motion: minimal breathing, slight posture settling, tiny hand relaxation and faint hair movement."
+  })

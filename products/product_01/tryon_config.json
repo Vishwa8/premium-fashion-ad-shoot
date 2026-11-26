@@ -1,0 +1,57 @@
+{
+  "task": "identity_consistent_garment_transfer",
+  "version": "2.0",
+  "product_id": "product_01",
+  "product_name": "Kalibherva Maroon Anarkali Gown B0HM458PW4",
+  "goal": "Generate a photorealistic fashion catalog image of the Ayurti virtual influencer wearing the exact Kalibherva Maroon Anarkali Gown in her native studio set, maintaining 100% identity, pose, hair, environment, and lighting consistency.",
+  "references": {
+    "identity_and_scene_reference_front": "base/base_front.png",
+    "identity_and_scene_reference_back": "base/base_back.png",
+    "garment_mockup_reference": "products/product_01/mockup/dress_3d_front.png",
+    "garment_catalog_reference": "products/product_01/references/dress_front_full.jpg"
+  },
+  "reference_priority": {
+    "identity_source_of_truth": "base/base_front.png",
+    "scene_and_lighting_source_of_truth": "base/base_front.png",
+    "garment_structure_source_of_truth": "products/product_01/mockup/dress_3d_front.png",
+    "garment_embroidery_source_of_truth": "products/product_01/references/dress_detail_1.jpg"
+  },
+  "subject": {
+    "identity_lock": {
+      "source": "base/base_front.png",
+      "instruction": "Preserve 100% of the model's identity. This includes her exact facial features, warm olive-golden skin tone, almond eye shape, natural eyebrows, subtle dimples, and refined catalog expression. Do not alter her ethnicity, bone structure, or facial proportions."
+    },
+    "hair": {
+      "instruction": "Maintain the exact shoulder-length dark brown wavy hair with gentle side parting as seen in base_front.png and base_back.png. No change in hair texture, volume, or placement."
+    },
+    "body_and_pose": {
+      "source": "base/base_front.png",
+      "instruction": "Replicate the exact standing pose, arm placement, and body proportions. Maintain the natural curve of the waist and stance balance."
+    },
+    "accessories": {
+      "instruction": "Preserve exact sculptural antique gold temple jhumkas on ears, traditional gold/kundan bangles on right wrist, bare left wrist, and cream leather square-toe flat sandals."
+    }
+  },
+  "wardrobe": {
+    "type": "Floor-length Anarkali Gown",
+    "color": "Deep Imperial Maroon (#4A0E17)",
+    "material": "Heavy premium faux georgette with micro-crepe lining, fluid cascading drape and subtle matte-sheen",
+    "neckline_detail": "Modest round jewel neckline with dense antique golden zari embroidery and light-catching micro-sequin yoke bib",
+    "sleeve_detail": "Fitted 3/4 sleeves ending below elbow with 2-inch matching antique gold zari embroidered cuffs",
+    "bodice_detail": "Tailored princess-cut fitted bodice extending to high natural waistline",
+    "skirt_detail": "Expansive 16-kali flared floor-length skirt with voluminous circular sweep hovering 1 inch above the floor line",
+    "back_detail": "Deep scooped U-neckline with delicate piped edges and functional maroon dori ties featuring ornate handcrafted golden latkan tassels",
+    "garment_transfer_rule": "Strictly transfer the Kalibherva gown construction, color, and embroidery into the masked dress region. Do not alter model skin, hands, jewelry, or background."
+  },
+  "scene_and_lighting": {
+    "environment": "Luminous champagne/ivory satin draped studio backdrop with graceful folds and floor pooling, matching base_front.png 100%.",
+    "lighting": "Warm 3200K tungsten key light, soft diffused ambient fill, subtle specular highlights on zari embroidery without clipping or glare.",
+    "composition": "Full-body vertical framing (9:16 aspect ratio), centered, balanced headroom and floor drape."
+  },
+  "consistency_lock": {
+    "identity_lock": "ABSOLUTE",
+    "garment_lock": "ABSOLUTE",
+    "scene_lock": "ABSOLUTE",
+    "lighting_lock": "ABSOLUTE"
+  }
+}

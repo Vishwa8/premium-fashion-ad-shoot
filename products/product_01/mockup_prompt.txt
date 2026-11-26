@@ -1,0 +1,17 @@
+A professional garment reference sheet isolated on pure white #FFFFFF background in a single horizontal row showing four full-body standing views: Front View, Left Profile View, Right Profile View, and Back View on an invisible ghost mannequin. 
+
+STRUCTURAL LOCK: The garment construction, seam placement, closure placement, neckline geometry, sleeve volume, waist position, hem width, tier placement, panel divisions, and silhouette proportions must match the reference image exactly. The AI is strictly forbidden from adding, removing, or relocating seams, zippers, ties, panels, darts, gathers, pleats, closures, or structural elements. 
+
+GEOMETRY LOCK: Maintain identical proportional ratios between neckline width, shoulder width, waist position, sleeve volume, and hem width as observed in the reference image. No proportional reinterpretation allowed.
+
+The garment is a luxury women's floor-length Anarkali gown in rich imperial maroon (#4A0E17) faux georgette fabric. 
+
+FRONT VIEW: Features a modest round jewel neckline embellished with an ornate, dense antique golden zari embroidery yoke accented with subtle light-catching micro-sequins. The bodice is closely fitted through the bust and natural waistline with clean vertical princess seams. Sleeves are fitted 3/4 length ending below the elbow, detailed with a 2-inch wide antique gold zari embroidered cuff border matching the neckline yoke. From the natural waistline, the skirt flows into a dramatic, voluminous floor-length Anarkali silhouette with 16 distinct kalis (vertical panels) that flare gracefully outward, ending in a wide, sweeping circular hem with delicate golden border piping hovering 1 inch above the floor line.
+
+PROFILE VIEWS (Left and Right): Reveal the sleek, tailored fit of the bodice, the continuous vertical flow of the flared kali panels expanding downward from the waist, and the clean 3/4 sleeve silhouette. Shows natural fabric drape with vertical cascading pleats and subtle dimensional fold depth.
+
+BACK VIEW: Showcases an elegant deep scooped round neckline with piped edge, secured across the upper back with delicate maroon cords (dori) tied in a bow, terminating in handcrafted, decorative golden latkan tassels hanging gracefully down the center back. The back bodice remains sleek and fitted, flowing seamlessly into the expansive 16-kali flared skirt mirroring the front volume.
+
+GHOST MANNEQUIN ANTI-BLEED PROTOCOL: The invisible ghost mannequin maintains solid 3D dimensional volume. The interior neck cavity, interior arm openings, and inner hem drape are rendered in deep charcoal-grey tones (#3A3A3A - #5A5A5A) showing graduated interior shadows to define structural hollow volume. Under no circumstances must the pure white #FFFFFF background show through interior garment openings.
+
+FABRIC & LIGHTING: Premium lightweight faux georgette with micro-crepe lining, delivering a fluid, airy drape with subtle matte textile weave and soft sheen catching balanced studio lighting. Photorealistic DSLR fashion catalog photography, crisp textile weave, sharp embroidery threadwork, no CGI, no airbrushing. Perfect alignment, proportion, and scale across all four views. 8k ultra-detailed resolution.

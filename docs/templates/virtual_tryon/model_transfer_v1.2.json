@@ -1,0 +1,132 @@
+{
+  "task": "identity_consistent_fashion_model_transfer",
+  "version": "1.2",
+  "goal": "Generate a photorealistic fashion image of the influencer from the provided identity references wearing the exact dress from the garment sheet, placed in the provided off-white wind-blown fabric scene, with bright premium editorial lighting and tasteful indo-western styling.",
+  "references": {
+    "identity_closeup_reference": "image 1",
+    "identity_full_body_reference": "image 2",
+    "garment_reference": "image 3",
+    "scene_reference": "image 4"
+  },
+  "reference_priority": {
+    "face_identity_source_of_truth": "identity_closeup_reference",
+    "body_proportions_source_of_truth": "identity_full_body_reference",
+    "garment_source_of_truth": "garment_reference",
+    "scene_source_of_truth": "scene_reference",
+    "pose_source_of_truth": "identity_full_body_reference",
+    "lighting_source_of_truth": "identity_full_body_reference"
+  },
+  "subject": {
+    "identity_lock": {
+      "primary_face_source": "identity_closeup_reference",
+      "secondary_body_source": "identity_full_body_reference",
+      "instruction": "Preserve the exact influencer identity from the closeup reference as the main source of truth for face, skin tone, eye shape, eyebrows, nose, lips, jawline, forehead proportions, and hairline. Use the full-body reference as the source of truth for body proportions, shoulder width, arm proportions, posture, stance feel, and overall real-person presence. Do not generate a lookalike, beautified substitute, or different person."
+    },
+    "expression": "Soft confident natural smile with premium catalog/influencer presence.",
+    "hair": {
+      "source_priority": [
+        "identity_closeup_reference",
+        "identity_full_body_reference"
+      ],
+      "instruction": "Match the influencer's real hair color, parting, volume, softness, length impression, and polished natural styling. Keep hair realistic and consistent with both references."
+    },
+    "body_and_pose": {
+      "source": "identity_full_body_reference",
+      "instruction": "Match the influencer's natural body proportions and elegant feminine standing presence from the full-body image. Use the full-body reference as the primary source of truth for pose, arm placement, hand positioning, torso angle, stance balance, and overall presentation feel. Keep the pose very close to the full-body identity reference unless minor adjustment is needed for garment readability. Maintain a graceful, front-facing premium catalog posture with anatomically correct hands and natural limb proportions."
+    }
+  },
+  "wardrobe": {
+    "type": "Sleeveless strappy flared midi/maxi dress",
+    "garment_transfer_rule": "Use the garment_reference as the primary source of truth for outfit design. Reproduce the exact dress silhouette, neckline, strap placement, gathered ruffle trim at the top edge, hem ruffle, print scale, print spacing, fabric fall, and overall construction. Do not redesign, reinterpret, embellish, or invent alternate details.",
+    "base_color": "Warm mustard yellow",
+    "pattern": {
+      "motif": "Repeated leaf print",
+      "motif_colors": "Muted pink leaf interiors with green outlines/stems",
+      "layout": "Evenly distributed repeating botanical motif across the entire garment",
+      "consistency_rule": "Keep print scale, spacing, orientation, and motif style highly consistent with the garment reference."
+    },
+    "design_details": {
+      "neckline": "Straight neckline with gathered ruffle trim",
+      "straps": "Thin shoulder straps matching the dress fabric",
+      "silhouette": "Softly fitted through upper body, falling into a gentle A-line / flared shape",
+      "hem": "Ruffled hem finish",
+      "fabric": "Lightweight woven fabric with soft natural drape, matte to lightly textured finish",
+      "length": "Below-knee to long midi / near-maxi proportion as indicated by the garment reference"
+    },
+    "styling_rules": {
+      "no_extra_layers": true,
+      "no_dupatta": true,
+      "no_jacket": true,
+      "no_shawl": true,
+      "no_unrelated_accessories": false,
+      "priority": "Exact dress fidelity over stylistic invention"
+    }
+  },
+  "character_accessories": {
+    "overall_direction": "Modern indo-western styling that complements the dress without overpowering it.",
+    "earrings": {
+      "instruction": "No jhumka. Use modern elegant earrings such as sleek drops, minimal danglers, geometric gold-toned earrings, or refined contemporary statement earrings suited to indo-western styling.",
+      "avoid": ["jhumka", "heavy temple jewelry", "oversized bridal earrings"]
+    },
+    "footwear": {
+      "instruction": "Add stylish chappals/sandals that suit premium indo-western wear. Prefer elegant flat sandals, low block-heel sandals, or refined ethnic-modern slip-ons in neutral, gold, tan, beige, or muted metallic tones.",
+      "avoid": [
+        "sports shoes",
+        "chunky sneakers",
+        "heavy boots",
+        "clunky footwear"
+      ]
+    },
+    "hand_accessories": {
+      "instruction": "Keep accessories tasteful and minimal. Optional slim bracelet, delicate ring, or subtle modern bangle stack if it matches the styling.",
+      "avoid": ["heavy bridal stacks", "traditional overload", "bulky watches"]
+    },
+    "neck_accessories": {
+      "instruction": "No heavy necklace. Neck can remain clean or include a very subtle modern chain only if it does not conflict with the neckline.",
+      "avoid": ["choker", "heavy bridal necklace", "dense layered neck jewelry"]
+    },
+    "bag_optional": {
+      "instruction": "Usually omit bags for a clean garment-focused image. Only add a small premium neutral clutch if explicitly needed later."
+    }
+  },
+  "scene_and_composition": {
+    "environment": "Use the provided scene_reference as the scene source of truth: luminous off-white / ivory wind-blown satin or silk-like fabric backdrop with soft flowing folds, warm highlights, and premium editorial depth.",
+    "background_elements": "Keep the background minimal, clean, luxurious, and fabric-focused. No furniture, no plants, no architectural elements, no props, no clutter.",
+    "composition": "Premium vertical fashion composition suitable for editorial, catalog, and influencer output.",
+    "framing": "Full-body fashion framing so the complete dress silhouette, hem shape, fabric fall, and footwear are clearly visible.",
+    "lighting": "Match the lighting feel of the full-body identity reference as closely as possible, but make it as bright as possible while staying premium and natural. Use bright soft diffused frontal studio lighting with very clean exposure, gentle front fill, soft side fill, lifted shadows, minimal contrast harshness, warm-neutral skin rendering, crisp garment readability, and polished catalog brightness. Avoid dimness, dramatic shadowing, dull tones, or moody lighting.",
+    "mood": "Luxury modern fashion campaign, airy, polished, feminine, premium, clean"
+  },
+  "photorealism_and_quality": {
+    "style": "High-end photorealistic fashion campaign photography",
+    "skin": "Realistic skin texture with natural pores, refined but not over-smoothed skin, believable facial detail, no plastic skin",
+    "fabric_detail": "Preserve visible dress fabric texture, natural seams, realistic fold behavior, and true fabric weight. The background fabric should look silky, luminous, and softly wind-shaped.",
+    "camera_settings": "Fashion photography look, shallow to moderate depth of field, sharp subject focus, premium digital capture, bright exposure"
+  },
+  "identity_and_garment_lock": {
+    "identity_preservation": "Very strict",
+    "outfit_preservation": "Very strict",
+    "face_priority": "Exact influencer face from identity_closeup_reference",
+    "body_priority": "Real body proportions and standing presence from identity_full_body_reference",
+    "garment_priority": "Exact dress from garment_reference",
+    "scene_priority": "Exact background mood, color family, and flowing satin-like texture from scene_reference",
+    "no_identity_drift": true,
+    "no_face_reinterpretation": true,
+    "no_body_replacement": true,
+    "no_outfit_redesign": true,
+    "no_pattern_change": true,
+    "no_color_shift": true,
+    "pose_priority": "Pose, arm placement, and standing presentation should closely follow identity_full_body_reference",
+    "lighting_priority": "Lighting should closely follow the bright clean catalog lighting feel of identity_full_body_reference, pushed as bright as possible without overexposure"
+  },
+  "negative_prompt_shorthand": "identity drift, generic face, face morphing, wrong person, altered facial features, extra limbs, extra fingers, broken hands, anatomy distortion, wrong dress, sleeve addition, dupatta, shawl, jacket, wrong neckline, wrong straps, missing ruffle trim, wrong hem, pattern mismatch, print scale mismatch, color shift, low quality, blur, oversmoothing, plastic skin, flat lighting, harsh shadows, cluttered background, props, watermark, logo, text, jhumka, bridal jewelry, sneakers, boots",
+  "technical_preferences": {
+    "resolution": "4K",
+    "aspect_ratio": "9:16",
+    "render_mode": "Photorealistic premium fashion editorial",
+    "consistency_mode": "Strict Identity + Strict Garment + Scene Fidelity",
+    "brightness_priority": "Maximum clean brightness",
+    "color_lock": "Maintain mustard yellow dress, pink-green leaf print, and off-white luminous satin-like scene consistently",
+    "exposure_instruction": "High-key premium catalog exposure with preserved skin tone, preserved dress detail, and no blown highlights on face or garment"
+  }
+}

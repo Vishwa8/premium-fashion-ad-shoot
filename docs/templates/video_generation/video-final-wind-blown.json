@@ -1,0 +1,113 @@
+{
+  "task": "identity_locked_fashion_video_generation",
+  "version": "1.1",
+  "goal": "Create a photorealistic premium fashion video using the result image as the primary visual source of truth, with extremely strict front-view consistency, subtle motion, stable identity, stable garment details, and a bright premium editorial look.",
+  "references": {
+    "primary_result_reference": "image 1"
+  },
+  "reference_priority": {
+    "identity_source_of_truth": "primary_result_reference",
+    "face_source_of_truth": "primary_result_reference",
+    "garment_source_of_truth": "primary_result_reference",
+    "accessories_source_of_truth": "primary_result_reference",
+    "scene_source_of_truth": "primary_result_reference",
+    "lighting_source_of_truth": "primary_result_reference",
+    "pose_source_of_truth": "primary_result_reference"
+  },
+  "engine_specs": {
+    "model": "Veo 3.1",
+    "rendering_mode": "Photorealistic premium fashion commercial",
+    "camera_profile": "High-end digital cinema fashion capture, clean color science, bright studio exposure",
+    "target_fps": 24,
+    "total_duration": "6.0s",
+    "aspect_ratio": "9:16",
+    "temporal_coherence": "Maximum strict frame-to-frame consistency",
+    "start_frame_source": "primary_result_reference",
+    "reference_mode": "Single-image locked video generation"
+  },
+  "character_definition": {
+    "identity": {
+      "source": "primary_result_reference",
+      "instruction": "Use identity_source_of_truth as the exact source of truth for the model identity. Preserve the exact same person, facial structure, skin tone, hairline, hairstyle, expression family, and overall visual character from identity_source_of_truth.",
+      "expression_lock": "Proud, bold, happy, calm premium catalog expression throughout the video"
+    },
+    "attire": {
+      "source": "primary_result_reference",
+      "instruction": "Use garment_source_of_truth as the exact source of truth for dress appearance. Preserve the exact front-view dress only: same neckline, same thin straps, same ruffle trim, same print scale, same print spacing, same hem shape, same color balance, same silhouette, and same fabric behavior."
+    },
+    "accessories": {
+      "source": "primary_result_reference",
+      "instruction": "Use accessories_source_of_truth as the exact source of truth for earrings, bracelet, rings, and sandals/chappals. Do not add, remove, enlarge, recolor, or redesign accessories between frames."
+    }
+  },
+  "environment_setup": {
+    "source": "primary_result_reference",
+    "location_type": "Bright premium editorial fabric set",
+    "backdrop_instruction": "Use scene_source_of_truth as the exact source of truth for the off-white / ivory luminous satin-like fabric background, including tone, softness, premium look, and overall arrangement.",
+    "lighting_instruction": "Use lighting_source_of_truth as the exact source of truth for the bright soft premium lighting feel. Keep exposure clean, highlights controlled, skin flattering, and garment details readable throughout the video.",
+    "set_elements": "No extra props, no furniture, no plants, no architecture, clean minimal luxury setup"
+  },
+  "motion_safety_rules": {
+    "body_orientation": "Keep the model fully front-facing or extremely slight 3/4 front-facing only. Never rotate enough to reveal side profile or back details.",
+    "turn_limit": "No spins, no half-turns, no side reveal, no back-facing movement, no rear garment reveal.",
+    "face_lock": "Keep the face identity stable and consistent in every frame using face_source_of_truth. No morphing, no expression drift, no facial structure change.",
+    "garment_lock": "Do not redesign, reinterpret, or newly reveal unseen dress details. Keep the entire outfit visually identical to garment_source_of_truth.",
+    "background_lock": "Keep the same ivory satin-like background style and arrangement from scene_source_of_truth. Only allow subtle wind-blown movement in the fabric.",
+    "pose_lock": "Keep the same standing presentation and front-view posture from pose_source_of_truth, with only tiny natural motion.",
+    "motion_style": "Use only very slow and subtle motion: minimal breathing, slight posture settling, tiny hand relaxation, faint hair movement, and gentle background fabric drift."
+  },
+  "motion_plan": {
+    "core_goal": "Create a realistic bright premium fashion video using the configured references as the source of truth, with extremely strong consistency in face, dress, accessories, lighting, and front-side presentation.",
+    "camera_motion": "Very slow subtle push-in only, with no orbit, no lateral sweep, and no angle change.",
+    "subject_motion": "Tiny natural breathing motion, almost imperceptible torso settling, slight chin confidence, minimal hand micro-adjustment, very subtle happy-proud facial life without changing identity.",
+    "fabric_motion": "Only the background fabric should show a soft elegant wind-blown movement. Keep it subtle, smooth, and premium.",
+    "hair_motion": "Very slight natural hair movement only if needed, with no hairstyle change."
+  },
+  "timeline_sequence": [
+    {
+      "time": "0.0s-2.0s",
+      "action": "Hold the starting pose almost exactly as in pose_source_of_truth. Maintain steady front-facing posture, calm happy-proud expression, and full garment consistency. Background fabric moves very slightly."
+    },
+    {
+      "time": "2.0s-4.0s",
+      "action": "Introduce a tiny natural breathing motion and a subtle confident facial liveliness. Keep hands nearly unchanged. Camera performs a very slow gentle push-in. Background fabric continues a soft elegant drift."
+    },
+    {
+      "time": "4.0s-6.0s",
+      "action": "Sustain the proud bold happy expression with stable face identity from face_source_of_truth. Allow only minimal posture settling and tiny fabric response in the dress hem if natural. End still fully front-facing with no drift in garment or face."
+    }
+  ],
+  "negative_prompt_shorthand": "low quality, blur, flicker, jitter, frame warping, identity drift, face morphing, anatomy distortion, extra fingers, extra limbs, dress redesign, neckline change, strap change, ruffle trim change, print mismatch, print scale drift, hem redesign, accessory inconsistency, lighting drift, color shift, background redesign, over-smoothed skin, plastic skin, text, watermark, logo, camera shake, side reveal, back reveal, back-facing turn, strong pose change, strong facial change, aggressive wind, exaggerated cloth motion",
+  "technical_overrides": {
+    "consistency_weight": "maximum",
+    "identity_lock_strength": "maximum",
+    "garment_lock_strength": "maximum",
+    "background_lock_strength": "high",
+    "motion_intensity": "very low",
+    "camera_movement_intensity": "very low",
+    "wind_intensity": "subtle",
+    "facial_expression_variation": "very subtle only"
+  },
+  "output_constraints": {
+    "must_keep": [
+      "front side only",
+      "exact face identity from face_source_of_truth",
+      "exact dress print and construction from garment_source_of_truth",
+      "exact accessories from accessories_source_of_truth",
+      "exact bright editorial look from lighting_source_of_truth",
+      "subtle wind-blown background fabric from scene_source_of_truth"
+    ],
+    "must_avoid": [
+      "identity drift",
+      "garment drift",
+      "print drift",
+      "camera angle drift",
+      "side reveal",
+      "back reveal",
+      "background redesign",
+      "overacting",
+      "strong hand movement",
+      "strong body movement"
+    ]
+  }
+}

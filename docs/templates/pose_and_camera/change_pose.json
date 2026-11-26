@@ -1,0 +1,85 @@
+{
+  "task": "photorealistic_image_generation",
+  "version": "1.4_single_reference_pose_variation",
+  "goal": "Generate a new pose variation using the provided base_reference image as the complete source of truth for identity, dress, styling, background, and lighting. Only the pose should change while everything else remains identical.",
+  "references": {
+    "base_reference": "BASE_IMAGE.jpg"
+  },
+  "priority_rules": {
+    "base_reference_priority": "absolute",
+    "explicit_rule": "Preserve EVERYTHING from base_reference except the pose. No changes allowed to identity, dress, accessories, background, or lighting."
+  },
+  "subject": {
+    "identity_preservation": "exact",
+    "instruction": "Use base_reference as the complete identity source. Face, skin tone, features, and proportions must remain identical. No identity drift or beautification changes.",
+    "hair": "Keep hair exactly the same as base_reference. No change in style, direction, or volume.",
+    "makeup": "Keep makeup identical to base_reference. No enhancement or style change.",
+    "expression": "Maintain same expression unless minor natural adjustment is required for pose realism.",
+    "body": {
+      "pose_instruction": "SOFT FEMININE POSE, model gently holding sides of the dress to highlight fabric and print, slight downward glance, relaxed shoulders, elegant natural feel",
+      "consistency_rule": "Body proportions and presence must remain identical to base_reference."
+    }
+  },
+  "wardrobe_and_accessories": {
+    "dress": "Preserve EXACT same dress from base_reference. No change in design, fit, fabric, folds, or print.",
+    "accessories": "Keep accessories exactly the same. Do not add, remove, or modify.",
+    "footwear": "Keep same footwear exactly with correct perspective."
+  },
+  "pose_and_composition": {
+    "pose_change": "ONLY pose should change as defined in pose_instruction.",
+    "camera_angle": "Maintain same camera angle and lens feel as base_reference.",
+    "framing": "Keep same framing style. Minor adjustment allowed only if required for pose realism.",
+    "proportions": "Subject scale and placement must match base_reference."
+  },
+  "environment_and_lighting": {
+    "background": "Preserve exact same background and environment.",
+    "lighting": "Keep lighting identical (direction, softness, exposure, color).",
+    "shadows": "Maintain consistent shadow logic with the new pose."
+  },
+  "photorealism_and_quality": {
+    "style": "Ultra-photorealistic DSLR fashion photography",
+    "consistency_mode": "STRICT single-reference lock",
+    "detail_level": "High-resolution, crisp, realistic textures"
+  },
+  "consistency_lock": {
+    "identity_lock": "VERY STRICT",
+    "garment_lock": "VERY STRICT",
+    "scene_lock": "VERY STRICT",
+    "lighting_lock": "VERY STRICT",
+    "pose_priority": "ONLY allowed variation"
+  },
+  "negative_prompts": [
+    "identity drift",
+    "different face",
+    "face morphing",
+    "beauty filter",
+    "wrong dress",
+    "dress redesign",
+    "print change",
+    "background change",
+    "lighting change",
+    "camera angle change",
+    "new accessories",
+    "missing accessories",
+    "blurry",
+    "low resolution",
+    "deformed anatomy",
+    "extra limbs",
+    "warped fabric",
+    "AI artifacts",
+    "over stylization"
+  ],
+  "technical_preferences": {
+    "resolution": "4K",
+    "aspect_ratio": "Same as base_reference",
+    "consistency_mode": "STRICT LOCK",
+    "brightness_priority": "Maintain original exposure",
+    "exposure_instruction": "Match base_reference exactly with consistent brightness and tone"
+  },
+  "output_constraints": {
+    "no_identity_change": true,
+    "no_pose_change_except_defined": true,
+    "no_scene_change": true,
+    "no_styling_change": true
+  }
+}

@@ -1,0 +1,7 @@
+Adapt the system prompt to use the image 1 as start frame and image 2 as end frame and create a smooth slow-mo seamless video prompt. Keep the model fully front-facing or extremely slight 3/4 front-facing only, can add camera movements (camera dolly in or dolly out, tilt up, tilt down, pan right, pan left, truck right or left, zoom in or zoom out and other) as per the movements in the video but never rotate enough to reveal side profile or back details. Keep the face identity stable and consistent in every frame using face_source_of_truth. No morphing, no expression drift, no facial structure change.
+
+do not add all these - "Here is the adapted ultra-photorealistic system prompt. The description of the model, attire, and environment has been meticulously updated to exactly match your provided images. The timeline has been rewritten to create a seamless, slow-motion dolly-in transition from Image 1 (start frame) to Image 2 (end frame) while strictly enforcing the facial consistency and rotation constraints you requested.
+
+***
+
+" straight away start from "# Ultra-photorealistic product showcase masterpiece" this line.

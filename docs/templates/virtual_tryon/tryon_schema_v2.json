@@ -1,0 +1,48 @@
+{
+  "task": "identity_consistent_garment_transfer",
+  "version": "2.0",
+  "goal": "Generate a photorealistic fashion image of the specific model from identity_source_of_truth wearing the exact emerald green dress from 'image.jpg'. Maintain the original model's identity, pose, and the luminous satin background perfectly.",
+  "references": {
+    "identity_and_scene_reference": "image 1",
+    "garment_reference": "image 2"
+  },
+  "reference_priority": {
+    "identity_source_of_truth": "identity_and_scene_reference",
+    "pose_and_body_source_of_truth": "identity_and_scene_reference",
+    "garment_structure_source_of_truth": "garment_reference",
+    "scene_and_lighting_source_of_truth": "identity_and_scene_reference"
+  },
+  "subject": {
+    "identity_lock": {
+      "source": "identity_source_of_truth",
+      "instruction": "Preserve 100% of the model's identity. This includes her exact facial features, skin tone, eye shape, eyebrows, and natural smile. Do not alter her ethnicity or facial proportions. She must be the exact person from the reference."
+    },
+    "hair": {
+      "instruction": "Maintain the long, dark, wavy hairstyle with a side part as seen in identity_source_of_truth. The hair should drape over her right shoulder naturally."
+    },
+    "body_and_pose": {
+      "source": "identity_source_of_truth",
+      "instruction": "Replicate the exact standing pose: front-facing, hands clasped at the waist. Maintain the model's specific body proportions and height."
+    }
+  },
+  "wardrobe": {
+    "type": "Emerald Green Midi Dress",
+    "color": "Rich emerald green (#046307)",
+    "material": "Viscose fabric with a soft, fluid drape and matte finish",
+    "neckline_detail": "Narrow split V-neckline opening into a rounded keyhole cutout at the upper bust. Ensure structural depth in the opening.",
+    "sleeve_detail": "Elbow-length balloon sleeves, gathered at the shoulder for volume, ending in smooth fitted cuffs just below the elbow.",
+    "silhouette": "Tailored bodice with continuous princess seams (no waist seam), transitioning into a gentle A-line midi-length skirt falling at mid-calf.",
+    "garment_transfer_rule": "Strictly follow the construction of the dress in 'image.jpg'. Do not add patterns, ruffles (except where sleeves gather), or change the neckline geometry. The dress must drape realistically over the model's form in the base pose."
+  },
+  "scene_and_lighting": {
+    "environment": "Luminous off-white/ivory satin fabric backdrop with soft flowing folds and warm highlights, exactly as seen in identity_source_of_truth.",
+    "lighting": "Bright, soft diffused studio lighting. High-key catalog exposure that preserves skin texture and the deep green saturation of the dress.",
+    "composition": "Full-body vertical framing (9:16 aspect ratio) matching the original composition."
+  },
+  "photorealism_and_quality": {
+    "camera": "Photographed with a DSLR look, sharp focus on the model, shallow depth of field for the fabric background.",
+    "texture_fidelity": "Visible fabric weave, realistic garment folds, and natural skin pores. Avoid any airbrushed, CGI, or plastic-like textures.",
+    "rendering": "8k ultra-detailed resolution, high-end fashion editorial quality."
+  },
+  "negative_prompt": "identity drift, different person, generic face, altered smile, sleeveless, red dress, mustard dress, ruffles on neckline, ruffles on hem, horizontal waist seam, pattern, print, jewelry change, sneakers, boots, messy hair, low resolution, plastic skin, CGI, watermark, text."
+}

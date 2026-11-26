@@ -1,0 +1,58 @@
+# Ultra-photorealistic product showcase masterpiece
+
+You are a world-renowned master digital cinematographer specializing in ultra-photorealistic, professional product showcase videos for fashion items, featuring models in smooth lifelike motion.
+
+Your signature style combines (layered mastery::1.4):
+
+- Perfect photorealistic 8K video rendering::1.3 with hyper-detailed fabric textures::1.2, subtle material sheen::1.3, lifelike movements and poses
+- Warm cinematic lighting::1.2 with gentle shadows highlighting product details across all frames
+- Flawless anatomy, realistic fabric physics::1.2, hair strands, material shimmer::1.2 in continuous motion
+- Professional elegance – tasteful and engaging with focus on product features
+- Absolute frame-to-frame consistency::1.4: identical faces, bodies, skin tones, hair, makeup, attire, jewelry from first to last frame – no drifting
+- Perfect temporal coherence: 60fps blended slow-motion and real-time pacing, fluid lifelike motion without jitter
+- Natural skin appearance only, no added texture details
+
+You never add text, watermarks, artifacts, sudden cuts, or distractions. Always prioritize masterpiece quality::1.4, best quality::1.4, highly detailed::1.3.
+
+**Strict Negative Directives (Avoid in Every Frame):**
+blurry, low quality, deformed, bad anatomy, extra limbs, watermark, text, cartoon, plastic skin, explicit content, fabric clipping, character drift, jittery movement, lighting changes without motivation, pores, goosebumps, breath ripples
+
+Strict rules:
+
+- Render exactly as described
+- Maximize fabric detail::1.2, material physics::1.2, model movements across all frames
+- Ensure perfect character and product consistency by repeatedly referencing fixed descriptions – strict image match
+- Shallow depth of field
+- Professional fashion influence::1.1
+
+Now, create a 6 second breathtaking video strictly following this structured description, with perfect consistency by loop-referencing fixed elements in timeline:
+
+**Consistency**: STRICT IMAGE CONSISTENCY MODE (HEIGHTENED FASHION FOCUS / NON-GRAPHIC)
+
+**Music**: Strictly no music.
+
+**Sound Design**: Subtle ambient sounds like rustling fabric, soft footsteps, and gentle breaths to heighten immersion without music.
+
+**Global Style Override**: ultra-realistic cinematic product showcase, professional elegance, heightened fashion focus, smooth natural motion, consistent character, shallow depth of field, warm studio ambient light, plain orange background static in frame, natural skin appearance only, no added texture details::1.4, softly intensified elegance::1.3, photorealistic 8K video masterpiece::1.4, highly detailed::1.3, best quality::1.4, absolute character and attire consistency throughout::1.4
+
+**Character 1 – Model** : The model A young adult woman with medium-brown skin and dark, wavy hair, standing against an orange-brown background. She is smiling and looking directly at the camera, showing a slight dimple on her left cheek. Her hair is parted slightly to the side and falls past her shoulders in loose waves. She appears to be in her 20s or 30s.
+
+**Attire – Model** : She is wearing a midi dress with round boat neckline measuring approximately 9 inches wide positioned at natural shoulder line with clean straight-across front and back edges, elbow-length puffed sleeves set into standard armholes with shoulder gathering creating 16-inch maximum circumference at mid-upper-arm tapering to fitted elastic cuffs measuring 8 inches circumference at elbow with subtle 0.5-inch-wide elastic casing, surplice wrap bodice with diagonal front overlap creating a subtle V-neck illusion at center front secured by a functional self-fabric tie belt attached at natural waist level (tie straps each 2 inches wide extending 24 inches from attachment points), fitted bodice side seams curving gently from underarm to waist without darts, straight midi skirt attached at natural waist seam with minimal A-line flare (waist 26 inches to hem 50 inches) falling to straight hem 4 inches below knee, no back closures or openings with tie ends visible at center back waist. All seam placements, proportions. linen-like material softly clinging to form, accentuating natural silhouette – identical drape and shimmer::1.3 throughout
+
+**Jewelry – Model** : On her right wrist, she stacks sculptural gold bangle: a thick smooth cuff & no jewels in her left wrist. She accessorizes with oversized sculptural gold hoop earrings that curve elegantly like abstract C-shapes with polished surfaces catching the light. – exact position and gleam every frame
+
+**Footwear – Model** : On her feet, she slips into elegant square-toe flat sandals in soft cream leather, grounding the look.
+
+**Environment** : Plain solid orange studio background with even lighting, no additional elements, The overall vibe is effortlessly chic and luxurious, with warm golden hour lighting highlighting the metallic accents against the neutral tones – static and consistent throughout
+
+**Camera & Composition (Overall)** : Slow cinematic movement with smooth transitions throughout, strong focus on facial micro-expressions, product tension, tactile presence, natural pacing, focusing on dress details from multiple angles
+
+**Technical Details** : Natural realistic skin with delicate natural warmth::1.3, fabrics catching light with realistic highlights/shadows, dress material shimmering naturally with every micro-shift::1.3, 60fps blended slow-motion and real-time pacing for fluid lifelike grace of every pose and turn, ultra-detailed fabric physics and hair strands, high-fidelity motion and expressions, perfect consistency across all frames, 6 second smooth video
+
+**Video Timeline – Second-by-Second Flow** :
+
+- 0–2 sec: Medium close side-angle. She stands lightly in the studio as she poses with one hand on her hair, dress flowing naturally. Her breathing steady, lips part with quiet confidence, gaze soft and engaging. A faint shift passes through her pose. She slowly turns toward the camera. Her head tilts slightly, exposing her profile. Earrings sway with the subtle movement. Camera slowly pushes in toward her face.
+- 2–4 sec: Tight close-up on her upper body and dress. She adjusts the tie at her waist with a lingering soft hand movement. Time feels slowed. Her eyes focus fully, brows soften, lips curve slightly as she presents the outfit. A wave of elegance passes across her face — poise, warmth, style. Her head leans slightly instinctively, hand brushing the fabric. Her hands maintain steady contact at her waist, highlighting the product. Camera glides upward capturing her shifting expressions.
+- 4–6 sec: Extreme close-up transitioning to full profile. She releases a slow breath, expression melting into deep calm and quiet poise. She lifts slightly from the pose but remains engaged toward the camera. Her face stays prominent, sharing the spotlight with the dress. Her eyes open slowly, a faint confident smile forming. Final frame holds her stillness in the orange studio. Scene ends in lingering professional elegance.
+
+Generate the video now with maximum fidelity::1.4, professional depth::1.3, showcase impact::1.3, and perfect frame-to-frame consistency::1.4.

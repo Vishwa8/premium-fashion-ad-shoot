@@ -1,0 +1,1 @@
+From the system prompt extract only the descripton of the garment presisely as per in the image in 100 words. It must include construction details, print/color, fabric details, back view details and type. Straightaway Start from the description (Dont mention this or that) and only return the 100 word description.

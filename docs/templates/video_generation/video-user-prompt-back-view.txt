@@ -1,0 +1,13 @@
+Adapt the system prompt to use the image 1 as start frame and image 2 as end frame and create a smooth slow-mo seamless video prompt. Keep the model strictly back-facing. The model should never rotate more than 5 degrees, ensuring the face and side profiles remain completely hidden. Maintain the hair pattern and shoulder width consistently from hair_source_of_truth. No morphing of hair texture or dress color.
+Should add camera movements (camera dolly in or dolly out, tilt up, tilt down, pan right, pan left, truck right or left, zoom in or zoom out and other) as per the movements in the video.
+
+Following things are very important,
+
+("motion_safety_rules": {
+    "body_orientation": "Keep the model strictly back-facing. The model should never rotate more than 5 degrees, ensuring the face and side profiles remain completely hidden.",
+    "turn_limit": "Strictly no turns, no spins, no side reveals, and no head-turning that would reveal the jawline or profile.",
+    "identity_lock": "Maintain the hair pattern and shoulder width consistently from hair_source_of_truth. No morphing of hair texture or dress color.",
+    "garment_lock": "Do not introduce any front-side elements. Keep the back seams and sleeve length identical to garment_source_of_truth in every frame.",
+    "background_lock": "Keep the same ivory satin-like background style and arrangement from scene_source_of_truth.",
+    "motion_style": "Subtle and elegant: minimal breathing, gentle swaying of the skirt hem, and soft hair movement."
+  },)
