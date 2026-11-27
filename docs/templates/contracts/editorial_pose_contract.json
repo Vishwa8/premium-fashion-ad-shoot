@@ -1,0 +1,50 @@
+{
+  "$schema": "https://ayurti.ai/schemas/fashion-prompt-contract.v1.json",
+  "task": "editorial_pose_generation",
+  "version": "1.0.0",
+  "description": "Unified prompt contract for generating 5 canonical catalog editorial poses from locked try-on masters without design or identity drift.",
+  "role_and_system_directive": "You are a high-fashion editorial campaign photographer. Your objective is to re-pose the virtual influencer wearing the couture garment into dynamic, elegant catalog postures while strictly preserving the influencer's facial identity, skin tone, hair styling, garment construction, and champagne satin backdrop.",
+  "visual_conditioning_inputs": {
+    "tryon_master": {
+      "type": "image",
+      "description": "Locked virtual try-on master image providing 100% identity, garment, and studio lighting ground truth.",
+      "priority": 1
+    },
+    "pose_reference": {
+      "type": "image",
+      "description": "Target posture/camera angle reference defining the new body stance and framing.",
+      "priority": 2
+    }
+  },
+  "prompt_template": {
+    "system_prefix": "Use image 1 as the identity, garment, body, lighting, and scene source of truth. Replace only the model's pose and camera angle with the pose specified below, keeping everything else strictly the same.",
+    "preservation_clause": "Preserve the exact same woman, face, skin tone, hair parting and bun, jewelry, hands, body proportions, cream satin draped background, floor drape, and sandals. Preserve the exact garment details: {{GARMENT_KEY_DETAILS}}.",
+    "pose_and_camera_directive": "Transfer the pose and camera angle faithfully: {{POSE_AND_CAMERA_DESCRIPTION}}",
+    "quality_and_style": "Do not change identity, hairstyle, garment construction, background, lighting, or accessories. Photorealistic high-fashion editorial catalog photography.",
+    "negative_constraints": "identity drift, different model, face morphing, altered neckline, missing cowl drape, wrong color, pattern distortion, extra arms, distorted fingers, broken hands, background change, blurry details, cartoon, render."
+  },
+  "template_variables": {
+    "GARMENT_KEY_DETAILS": {
+      "type": "string",
+      "required": true,
+      "example": "deep imperial wine maroon (#4A0E17) faux georgette, vertical antique gold zari and micro-sequin pinstripes, asymmetric cowl drape on the wearer's right hip, embellished waistband, closed 16-kali flared circular skirt"
+    },
+    "POSE_AND_CAMERA_DESCRIPTION": {
+      "type": "string",
+      "required": true,
+      "example": "Full-body 3/4 turn angle facing slightly right, graceful walking stance with fluid circular skirt movement, hands naturally poised, eye contact with camera, full-length framing showing skirt hem sweep."
+    }
+  },
+  "three_ws_guidelines": {
+    "what_to_enforce": "Static structural garment lock during dynamic motion (closed skirt, single-side cowl anchored, floor-length sweep); zero facial morphing.",
+    "when_to_apply": "Applied during generation of the 5 canonical catalog poses (Pose 1 to Pose 5).",
+    "why_and_remediation": "Motion verbs ('swirling skirt', 'walking stride') cause models to invent high thigh slits or drop shoulder drapes unless structural anchors are re-asserted in every pose prompt."
+  },
+  "comfyui_binding": {
+    "node_type": "VishwaGeminiNanoBananaImage",
+    "model_preset": "Nano Banana Pro",
+    "aspect_ratio": "9:16",
+    "image_size": "2K",
+    "thinking_level": "medium"
+  }
+}

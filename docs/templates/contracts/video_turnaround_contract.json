@@ -1,0 +1,45 @@
+{
+  "$schema": "https://ayurti.ai/schemas/fashion-prompt-contract.v1.json",
+  "task": "cinematic_fashion_video_generation",
+  "version": "1.0.0",
+  "description": "Unified prompt contract for generating smooth, slow-motion commercial fashion videos using Google Veo 3.1 with strict motion safety boundaries.",
+  "role_and_system_directive": "You are a luxury fashion commercial film director. Your objective is to animate the static catalog image into a seamless, high-end 4K commercial fashion reel with subtle, elegant motion, zero facial morphing, zero garment distortion, and controlled camera moves.",
+  "visual_conditioning_inputs": {
+    "start_frame": {
+      "type": "image",
+      "description": "High-resolution catalog try-on image serving as the initial keyframe and ground truth for identity, dress, and scene.",
+      "priority": 1
+    },
+    "end_frame_optional": {
+      "type": "image",
+      "description": "Secondary keyframe for interpolation if executing a dual-frame turnaround.",
+      "priority": 2
+    }
+  },
+  "prompt_template": {
+    "system_prefix": "Cinematic slow-motion luxury fashion commercial video of the South Asian woman wearing the couture garment.",
+    "camera_and_lighting": "Smooth slow camera dolly-in with subtle upward tilt, high-end 3200K warm studio key light casting soft specular highlights on antique gold zari embroidery and micro-sequins.",
+    "model_and_motion": "The model holds an elegant, poised standing posture facing the camera with minimal slow-motion settling: subtle natural breathing motion, delicate finger relaxation, and faint sway of the circular skirt hem. {{DYNAMIC_GARMENT_MOTION}}",
+    "motion_safety_rules": "Strictly front-facing. Zero full spins or fast turns. Zero facial morphing, zero identity drift. Background remains stationary champagne pleated silk. 4K photorealistic broadcast fashion reel.",
+    "negative_constraints": "wild spins, 360 rotation, side profile reveal, rear reveal in front clip, face morphing, flickering, jitter, sudden jumps, garment redesign, extra limbs, background movement, cartoon, CGI, watermark."
+  },
+  "template_variables": {
+    "DYNAMIC_GARMENT_MOTION": {
+      "type": "string",
+      "required": true,
+      "example": "The asymmetric cowl drape and hanging micro-bead fringe catch the light with subtle micro-movements as the deep wine maroon georgette settles softly."
+    }
+  },
+  "three_ws_guidelines": {
+    "what_to_enforce": "Front-facing constraint; subtle slow-motion only (< 5% body shift); stationary champagne satin background; temporal identity coherence.",
+    "when_to_apply": "Applied during all Veo 3.1 video clip generations.",
+    "why_and_remediation": "Video diffusion models hallucinate missing backs or distort faces during rapid rotations. Remediation: Generate separate front and rear clips, and cross-fade in video post-processing."
+  },
+  "comfyui_binding": {
+    "node_type": "VishwaGoogleVeoVideo",
+    "model_preset": "Veo 3.1",
+    "aspect_ratio": "9:16",
+    "resolution": "1080p",
+    "person_generation": "allow_all"
+  }
+}

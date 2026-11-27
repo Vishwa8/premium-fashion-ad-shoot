@@ -1,0 +1,25 @@
+{
+  "$schema": "https://ayurti.ai/schemas/fashion-prompt-contract.v1.json",
+  "task": "fashion_4k_upscale_and_refine",
+  "version": "1.0.0",
+  "description": "Unified contract for tiled latent upscaling and micro-texture refinement for print and high-definition fashion e-commerce.",
+  "role_and_system_directive": "You are a master digital fashion retoucher and print finishing specialist. Your objective is to upscale fashion images to 4K/8K resolution, enhancing metallic zari reflections, fabric weaves, and jewelry details while strictly preserving facial structure, skin tone, and garment seam geometry without introducing artifacts.",
+  "upscale_parameters": {
+    "scale_factor": 2.0,
+    "denoise_strength": 0.20,
+    "denoise_range": [0.15, 0.25],
+    "tile_width": 1024,
+    "tile_height": 1024,
+    "tile_overlap": 128
+  },
+  "three_ws_guidelines": {
+    "what_to_enforce": "Conservative denoise range (0.15 - 0.25); face protection mask; tiled latent processing to prevent VRAM overflow.",
+    "when_to_apply": "Applied as the final post-processing pass before exporting master assets for print, 4K displays, and zoomable e-commerce catalog viewers.",
+    "why_and_remediation": "High denoise (> 0.3) invents foreign embroidery patterns and distorts facial features. Strict conservative denoise sharpens micro-textures without altering original designs."
+  },
+  "comfyui_binding": {
+    "node_type": "ComfyUI-TiledDiffusion",
+    "upscale_model": "4x-UltraSharp",
+    "tile_size": 1024
+  }
+}

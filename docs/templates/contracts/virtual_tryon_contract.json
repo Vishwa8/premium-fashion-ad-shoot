@@ -1,0 +1,50 @@
+{
+  "$schema": "https://ayurti.ai/schemas/fashion-prompt-contract.v1.json",
+  "task": "identity_locked_virtual_tryon",
+  "version": "1.0.0",
+  "description": "Unified prompt contract for transferring garments onto canonical influencer base plates with 0.0000% character and scene drift.",
+  "role_and_system_directive": "You are an elite virtual try-on fashion director. Your objective is to transfer the reference garment onto the locked influencer base plate with absolute zero drift in facial identity, facial expression, skin tone, hairstyle, hand anatomy, jewelry, and studio environment. Only the garment within the masked torso/skirt bounding area is replaced.",
+  "visual_conditioning_inputs": {
+    "base_influencer_plate": {
+      "type": "image",
+      "description": "Canonical high-resolution influencer base image providing 100% identity, pose, jewelry, and backdrop ground truth.",
+      "priority": 1
+    },
+    "garment_assembled_master": {
+      "type": "image",
+      "description": "Ghost mannequin assembled master or component flatlay providing 100% outfit construction, color, and drape ground truth.",
+      "priority": 2
+    },
+    "garment_inpaint_mask": {
+      "type": "mask",
+      "description": "Binary mask targeting the torso, arms, and skirt while protecting face, hair, neck collarbones, hands, and background.",
+      "priority": 3
+    }
+  },
+  "prompt_template": {
+    "system_prefix": "Use the base image as the identity, pose, body, lighting, and scene source of truth. Replace only the masked model's garment with the uploaded garment reference keeping everything else the same.",
+    "character_and_environment_lock": "Preserve the exact same woman, face, skin tone, hair parting and textured bun, expression, jewelry (antique gold jhumkas, rings), hands (anatomically correct 5 fingers), pose, body proportions, camera angle, full-body framing, cream satin draped background, floor drape, and sandals.",
+    "garment_transfer_directive": "Transfer the garment faithfully: {{GARMENT_SPECIFICATIONS}}",
+    "studio_and_realism_directives": "Visible textile weave, realistic fabric folds, natural drape weight, and authentic skin texture with natural pores. Do not change identity, hairstyle, background, lighting, composition, or accessories. Photorealistic fashion catalog image.",
+    "negative_constraints": "identity drift, different person, generic face, altered smile, skin tone change, hairstyle change, loose hair, extra limbs, extra fingers, malformed hands, altered jewelry, background change, color shift, plastic skin, CGI, watermark, text."
+  },
+  "template_variables": {
+    "GARMENT_SPECIFICATIONS": {
+      "type": "string",
+      "required": true,
+      "example": "Floor-length Anarkali gown in deep imperial wine maroon (#4A0E17) heavy faux georgette. Curved square front neckline, vertical antique gold zari and micro-sequin pinstripes. Embellished 1.5-inch waistband. Asymmetric cowl dupatta anchored at wearer's left shoulder, crossing diagonally into fluid crescent cowl swags over wearer's right hip trimmed with scalloped gold threadwork and dangling micro-bead droplets. Flared 16-kali circular skirt pooling on floor."
+    }
+  },
+  "three_ws_guidelines": {
+    "what_to_enforce": "100% face identity lock, right-side hair parting, exact skin tone, 5 fingers per hand, and champagne pleated silk studio backdrop.",
+    "when_to_apply": "Applied during all inpainting and virtual try-on steps onto the front and rear base plates.",
+    "why_and_remediation": "Diffusion models harmonize unmasked surroundings with new clothing colors unless explicitly restrained by identity anchors and strict negative constraints."
+  },
+  "comfyui_binding": {
+    "node_type": "VishwaGeminiNanoBananaImage",
+    "model_preset": "Nano Banana Pro",
+    "aspect_ratio": "9:16",
+    "image_size": "2K",
+    "thinking_level": "medium"
+  }
+}

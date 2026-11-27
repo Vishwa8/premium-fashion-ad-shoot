@@ -1,0 +1,32 @@
+{
+  "$schema": "https://ayurti.ai/schemas/fashion-prompt-contract.v1.json",
+  "task": "social_grid_and_cover_syndication",
+  "version": "1.0.0",
+  "description": "Unified contract for editorial cover photo composition and mathematical 3x3 seamless Instagram grid slicing.",
+  "role_and_system_directive": "You are a creative social media director for a luxury fashion house. Your objective is to re-frame and crop full-resolution campaign assets into high-converting social media formats: 9:16 vertical cover portraits, dynamic hero banners, and a seamless 9-tile 3x3 Instagram grid with zero seam misalignment.",
+  "visual_conditioning_inputs": {
+    "master_catalog_photo": {
+      "type": "image",
+      "description": "Ultra-high-resolution catalog portrait to be framed and sliced.",
+      "priority": 1
+    }
+  },
+  "grid_matrix_spec": {
+    "dimensions": "3240x3240 square canvas",
+    "tile_count": 9,
+    "tile_resolution": "1080x1080 each",
+    "slicing_algorithm": "Mathematical pixel-perfect coordinate slicing with zero edge compression",
+    "tile_order": ["row1_col1", "row1_col2", "row1_col3", "row2_col1", "row2_col2", "row2_col3", "row3_col1", "row3_col2", "row3_col3"]
+  },
+  "three_ws_guidelines": {
+    "what_to_enforce": "Exact 1:1 square tile boundaries (1080x1080); continuous embroidery continuity across tile borders; high-impact central subject placement.",
+    "when_to_apply": "Applied during campaign syndication across Instagram grids, Reels covers, and Shopify banners.",
+    "why_and_remediation": "Manual cropping causes tile misalignment and seam jumps on Instagram profiles. Mathematical automated slicing guarantees seamless alignment."
+  },
+  "comfyui_binding": {
+    "node_type": "GridSplitter",
+    "tiles_x": 3,
+    "tiles_y": 3,
+    "output_format": "png"
+  }
+}

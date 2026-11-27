@@ -1,0 +1,47 @@
+{
+  "$schema": "https://ayurti.ai/schemas/fashion-prompt-contract.v1.json",
+  "task": "garment_mockup_generation",
+  "version": "1.0.0",
+  "description": "Unified prompt contract for generating ghost mannequin garment reference mockups, 3-piece set breakdowns, and full-bleed assembled masters on pure #FFFFFF background.",
+  "role_and_system_directive": "You are a master digital couturier and fashion catalog photographer. Your objective is to generate physically consistent, zero-defect garment reference sheets on an invisible ghost mannequin against a seamless pure white #FFFFFF studio background. Enforce strict single-side drape geometry, natural finished necklines/shoulders, hollow dark grey inner lining cavities (#3A3A3A-#5A5A5A), and zero visible mannequin hardware.",
+  "visual_conditioning_inputs": {
+    "garment_raw_reference": {
+      "type": "image",
+      "description": "Vendor product photos or flatlay reference providing fabric color, embroidery, and construction ground truth.",
+      "priority": 1
+    }
+  },
+  "prompt_template": {
+    "system_prefix": "A professional ultra-high-resolution garment reference photograph isolated on a pure seamless white #FFFFFF studio background on an invisible ghost mannequin.",
+    "structural_lock": "The garment construction, seam placement, closure placement, neckline geometry, sleeve volume, waist position, hem width, tier placement, panel divisions, and silhouette proportions must match the reference image exactly.",
+    "cowl_drape_physics": "The garment features a single asymmetric pleated cowl dupatta/shawl anchored at ONE shoulder only: originates securely at the wearer's left shoulder (viewer's right in front view), crosses diagonally across the chest under the waistband, and pools into layered crescent cowl swags with scalloped antique gold trim and hanging micro-bead droplets over the wearer's right hip (viewer's left in front view). In 180° rear view, the shoulder drape rests on the viewer's left shoulder and flows cleanly downward. The opposite side of the skirt is smooth and flared with ZERO duplicate drapes.",
+    "ghost_mannequin_integrity": "True invisible ghost mannequin. Shoulder seams, neckline edges, and sleeve cuffs must be solid, continuous, smoothly tailored fabric with NO jagged cutouts, black void holes, or missing cloth. There is absolutely NO visible mannequin neck cylinder, stand, post, or peg protruding above or inside the neckline opening. Interior cavities are rendered with deep charcoal-grey tones (#3A3A3A-#5A5A5A) to define 3D volume against the pure white #FFFFFF background.",
+    "dynamic_garment_body": "{{GARMENT_SPECIFICATIONS}}",
+    "studio_directives": "High-fashion studio diffuse balanced lighting, soft grounding floor contact shadows, razor-sharp focus on textile weaves and metallic zari reflections.",
+    "negative_constraints": "visible mannequin neck, wooden peg, metal stand, post, cylinder, black void holes, sliced sleeve cuffs, duplicate cowl drapes on both hips, inverted shoulder anchors, blurry rear embroidery, missing bead droplets, grey background, dirty white, props, watermark, text."
+  },
+  "template_variables": {
+    "GARMENT_SPECIFICATIONS": {
+      "type": "string",
+      "required": true,
+      "example": "Floor-length Anarkali gown in deep imperial wine maroon (#4A0E17) premium heavy faux georgette. Curved square front neckline, tailored elbow-length half sleeves, vertical antique gold zari and micro-sequin pinstripes. Embellished 1.5-inch waistband. Flared 16-kali circular skirt pooling naturally at floor level."
+    },
+    "VIEW_MODE": {
+      "type": "string",
+      "enum": ["front_full", "back_full", "split_master", "piece_breakdown"],
+      "default": "front_full"
+    }
+  },
+  "three_ws_guidelines": {
+    "what_to_enforce": "Strict physical 3D asymmetry for single-shoulder pallus; hollow lining cavities (#3A3A3A-#5A5A5A); tailored fabric sleeve openings; and pure #FFFFFF background.",
+    "when_to_apply": "Applied during all ghost mannequin renders, 4-view sheets, dual-view masters, and 3-piece set component breakdowns.",
+    "why_and_remediation": "Diffusion models default to bilateral symmetry and invent duplicate drapes on both hips or drop hardware stumps into the collar. Explicit negative constraints and single-side rules eliminate these artifacts permanently."
+  },
+  "comfyui_binding": {
+    "node_type": "VishwaGeminiNanoBananaImage",
+    "model_preset": "Nano Banana Pro",
+    "aspect_ratio": "3:4",
+    "image_size": "2K",
+    "thinking_level": "medium"
+  }
+}
