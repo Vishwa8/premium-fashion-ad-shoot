@@ -76,6 +76,114 @@ Default ComfyUI web UI relies on manual user F5 refreshes after process restart.
 
 ---
 
+## 2. The Core Philosophy: The Zero-Drift E-Commerce Law & The Atomic "Lego-Brick" Inpainting Architecture
+
+### 2.1 The Non-Negotiable Zero-Drift Law & Commercial Impact
+In luxury couture and e-commerce advertising, **consistency is the bedrock of commercial trust**.
+- **The Catastrophic Cost of Drift**: If the model's facial features shift, skin tone oscillates, hair parting untangles, studio backdrop changes color or pleat density, or accessories morph between angles and products:
+  1. **Customer Trust Collapses**: Shoppers immediately detect synthetic inconsistency, perceive the catalog as untrustworthy or fraudulent, and abandon carts.
+  2. **Surging Return Rates**: Misrepresented fabric textures, incorrect drape physics, or hallucinated necklines lead directly to high return rates and customer dissatisfaction.
+  3. **Brand Devaluation**: Luxury brands cannot tolerate "almost identical." Every asset must meet 100% editorial parity.
+
+---
+
+### 2.2 The Canonical Single Source of Truth (SSOT): Clean Base Plates
+To achieve absolute consistency across hundreds of catalog SKUs, **every single product must be built on the exact same canonical base plates**:
+- **Front Master**: `base/base_front.png` (Front 0° full-body view).
+- **Back Master**: `base/base_back.png` (Back 180° full-body turnaround view).
+
+#### The Clean Base Plate Standard:
+1. **Try-On Friendly Neutral Garment**: The model wears a form-fitting, minimalist, neutral cream/beige slip dress. There are no ruffles, heavy folds, or preexisting embroidery to fight incoming garments.
+2. **ZERO Preexisting Accessories**:
+   - **Naked Neckline**: No necklaces, chokers, or chains (clean collarbone canvas).
+   - **Naked Ears**: No earrings, studs, or jhumkas (clean earlobes).
+   - **Naked Wrists & Hands**: No bangles, bracelets, or rings (clean hands with 5 anatomically perfect fingers).
+   - **Naked Waist**: No preexisting belts, latkans, or sashes.
+3. **Locked Facial & Hair Anatomy**:
+   - Canonical Indian influencer facial geometry, natural warm undertone with micro-pores, neutral regal expression.
+   - Right-side crisp parting leading into a textured, sleek low bun (zero loose tendrils that could blur during masking).
+4. **Locked Environmental Scene**:
+   - Champagne pleated satin/silk draped studio backdrop with vertical floor sweeps.
+   - Neutral, diffused 3-point softbox commercial studio lighting.
+
+---
+
+### 2.3 The Atomic "Lego-Brick" Inpainting Architecture
+Monolithic diffusion models (attempting to generate a gown, cowl drape, belt, earrings, necklace, and background simultaneously) invariably fail due to **context entanglement**:
+- Shoulder sashes hallucinate onto the wrong arm.
+- Necklaces bleed into bodice embroidery.
+- Waist belts warp or dissolve into the skirt pleats.
+
+#### The Lego-Brick Solution: Atomic Layering Protocol
+We decompose complex couture ensembles into atomic components and inpaint them sequentially, **stacking each component onto the base plate like Lego bricks**:
+
+```text
+┌────────────────────────────────────────────────────────────────────────┐
+│                        THE LEGO-BRICK STACK                           │
+├────────────────────────────────────────────────────────────────────────┤
+│  BRICK 6: Fine Jewelry (Bangles, Rings, Footwear)                      │
+│     ▲                                                                  │
+│  BRICK 5: Fine Jewelry (Jhumkas / Earrings)                            │
+│     ▲                                                                  │
+│  BRICK 4: Fine Jewelry (Kundan Choker / Necklace)                      │
+│     ▲                                                                  │
+│  BRICK 3: Kamarbandh / Waist Belt (Locks drape to silhouette)          │
+│     ▲                                                                  │
+│  BRICK 2: Pre-Draped Cowl Pallu / Dupatta (Left shoulder to right hip) │
+│     ▲                                                                  │
+│  BRICK 1: Base Anarkali Gown (Bodice, sleeves, kali skirt, back scoop) │
+│     ▲                                                                  │
+│  LAYER 0: Canonical SSOT Clean Base Plate (0 Accessories, Neutral Slip)│
+└────────────────────────────────────────────────────────────────────────┘
+```
+
+#### Step-by-Step Stacking Sequence:
+1. **Layer 0 (Foundation Canvas)**: Start with the clean SSOT Base Plate (`base_front.png` / `base_back.png`).
+2. **Brick 1 (Base Garment Inpaint)**:
+   - *Mask*: Bodice, arms, and skirt area.
+   - *Inpaint*: Piece 1 (Anarkali Gown) transferring deep imperial wine maroon faux georgette, vertical sequin pinstripes, half sleeves, and flared 16-kali skirt.
+   - *Result*: Layer 1 (Base Plate + Pure Anarkali).
+3. **Brick 2 (Drape Inpaint on top of Layer 1)**:
+   - *Mask*: Left shoulder down diagonal torso across right hip.
+   - *Inpaint*: Piece 2 (Pre-Draped Cowl Pallu) anchoring at left shoulder, cascading crescent cowl folds, and scalloped bead fringe.
+   - *Result*: Layer 2 (Base Plate + Anarkali + Draped Cowl).
+4. **Brick 3 (Locking Belt Inpaint on top of Layer 2)**:
+   - *Mask*: 1.5-inch waistband bounding band.
+   - *Inpaint*: Piece 3 (Embroidered Kamarbandh Belt) locking the cowl drape cleanly at the natural waistline.
+   - *Result*: Layer 3 (Complete 3-Piece Dressed Ensemble).
+5. **Brick 4 (Necklace Inpaint on top of Layer 3)**:
+   - *Mask*: Virgin neck/collarbone bounding box.
+   - *Inpaint*: Polki / Kundan choker or emerald bib necklace cleanly onto bare skin.
+6. **Brick 5 (Earrings Inpaint on top of Layer 4)**:
+   - *Mask*: Virgin earlobe bounding boxes.
+   - *Inpaint*: Matching antique gold jhumkas or chandelier earrings.
+7. **Brick 6 (Wrists/Bangles Inpaint on top of Layer 5)**:
+   - *Mask*: Forearms and wrists.
+   - *Inpaint*: Traditional kadas, glass bangles, or rings onto anatomically locked fingers.
+
+---
+
+### 2.4 Engine Model Selection: Open-Source FLUX Inpainting vs Multimodal Gemini/Nano Banana
+
+#### The Problem with Gemini / Nano Banana for Direct Try-On:
+- While **Gemini / Nano Banana** excels at semantic scene understanding, photorealistic image creation from scratch, ghost mannequin turnaround sheets, and high-level reasoning, **it does not support native pixel-locked binary inpainting out of the box**.
+- When asked to "replace only the dress," multimodal diffusion APIs perform global regeneration or latent perturbation, causing subtle shifts in facial bone structure, ear shape, hair edges, lighting color temperature, or backdrop wrinkles. **This violates the Zero-Drift Law.**
+
+#### The Open-Source FLUX Inpainting Engine (`FLUX.1 Fill [dev]`):
+- **Deterministic Pixel Preservation**: FLUX Fill takes the base image, a high-precision binary mask, and text/reference conditioning.
+- **Mathematical 0.0000% Drift**: Every pixel outside the mask is mathematically frozen and preserved bit-for-bit from the original base plate.
+- **Extreme Texture Fidelity**: FLUX.1 Fill's rectified flow transformer architecture synthesizes micro-sequins, sheer georgette drapes, and intricate zari threads that fuse seamlessly at the mask boundary without seamlines or color halos.
+
+#### The Dual-Engine Synergy:
+- **Nano Banana / Gemini**:
+  - Generates ghost mannequin 4-view turnaround sheets (`4-view-garment-sheet`).
+  - Generates 4-quadrant macro fabric detail sheets (`dual-view-and-quad-details`).
+  - Acts as the Vision QA Inspector evaluating seamlines, drape physics, and color accuracy.
+- **FLUX.1 Fill (In ComfyUI)**:
+  - The deterministic execution engine that applies the atomic Lego bricks (Garment Piece 1 $\rightarrow$ Piece 2 $\rightarrow$ Piece 3 $\rightarrow$ Accessories) onto the canonical SSOT base plate.
+
+---
+
 ## 3. The Enterprise Architecture: Webapp, n8n, 9Router & Self-Learning Skills
 
 ```text
