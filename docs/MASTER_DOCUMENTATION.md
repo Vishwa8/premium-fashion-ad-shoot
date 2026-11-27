@@ -108,79 +108,128 @@ To achieve absolute consistency across hundreds of catalog SKUs, **every single 
 
 ---
 
-### 2.3 The Atomic "Lego-Brick" Inpainting Architecture
-Monolithic diffusion models (attempting to generate a gown, cowl drape, belt, earrings, necklace, and background simultaneously) invariably fail due to **context entanglement**:
-- Shoulder sashes hallucinate onto the wrong arm.
-- Necklaces bleed into bodice embroidery.
-- Waist belts warp or dissolve into the skirt pleats.
+### 2.3 The Fully Decoupled, Interchangeable "Lego-Brick" Matrix (Editorial & UGC)
 
-#### The Lego-Brick Solution: Atomic Layering Protocol
-We decompose complex couture ensembles into atomic components and inpaint them sequentially, **stacking each component onto the base plate like Lego bricks**:
+The virtual fashion system operates as a **non-destructive, multi-layered compositing matrix**. Every single layer is **fully decoupled, independently editable, and interchangeable** using surgical inpainting, outpainting, relighting, and multi-model fusion—without altering or damaging any other layer.
 
 ```text
-┌────────────────────────────────────────────────────────────────────────┐
-│                        THE LEGO-BRICK STACK                           │
-├────────────────────────────────────────────────────────────────────────┤
-│  BRICK 6: Fine Jewelry (Bangles, Rings, Footwear)                      │
-│     ▲                                                                  │
-│  BRICK 5: Fine Jewelry (Jhumkas / Earrings)                            │
-│     ▲                                                                  │
-│  BRICK 4: Fine Jewelry (Kundan Choker / Necklace)                      │
-│     ▲                                                                  │
-│  BRICK 3: Kamarbandh / Waist Belt (Locks drape to silhouette)          │
-│     ▲                                                                  │
-│  BRICK 2: Pre-Draped Cowl Pallu / Dupatta (Left shoulder to right hip) │
-│     ▲                                                                  │
-│  BRICK 1: Base Anarkali Gown (Bodice, sleeves, kali skirt, back scoop) │
-│     ▲                                                                  │
-│  LAYER 0: Canonical SSOT Clean Base Plate (0 Accessories, Neutral Slip)│
-└────────────────────────────────────────────────────────────────────────┘
+┌──────────────────────────────────────────────────────────────────────────────┐
+│                    THE DECOUPLED LEGO-BRICK LAYER MATRIX                    │
+├──────────────────────────────────────────────────────────────────────────────┤
+│  LAYER 7: Global Environmental Harmonization (Contact shadows, reflections)   │
+│     ▲                                                                        │
+│  LAYER 6: Accessories & Accents (Handbag/Potli, Shoes/Mojris, Watch, Rings)  │
+│     ▲                                                                        │
+│  LAYER 5: Fine Jewelry (Maang Tikka, Jhumkas, Kundan Choker - bare skin lock)│
+│     ▲                                                                        │
+│  LAYER 4: Atomic Garment Bricks (Editable Color, Zari Pattern, Silhouette)   │
+│     │     • Brick 4C: Embroidered Waist Belt / Kamarbandh / Cinch Band       │
+│     │     • Brick 4B: Asymmetric Cowl Pallu / Dupatta / Trailing Cape        │
+│     │     • Brick 4A: Base Gown / Bodice & Kali Skirt (Front & Back)         │
+│     ▲                                                                        │
+│  LAYER 3: Subject Styling & Beauty (Eye lenses, Hair dye/style, Makeup)      │
+│     ▲                                                                        │
+│  LAYER 2: Canonical Subject Canvas (Bare-minimum slip, universal neck/legs)  │
+│     ▲                                                                        │
+│  LAYER 1: Scene & Environmental Context (100% Interchangeable Background)     │
+│     │     • Editorial Studio Shoot (Champagne silk, marble arches, softbox)  │
+│     │     • UGC Lifestyle (Sunlit room, aesthetic cafe, festive living room) │
+│     │     • Dynamic Lighting & Palette tailored to dress craftsmanship       │
+│     ▲                                                                        │
+│  LAYER 0: Spatial Framing & Camera Canvas (9:16 / 4:5 / 1:1, Focal Length)   │
+└──────────────────────────────────────────────────────────────────────────────┘
 ```
-
-#### Step-by-Step Stacking Sequence:
-1. **Layer 0 (Foundation Canvas)**: Start with the clean SSOT Base Plate (`base_front.png` / `base_back.png`).
-2. **Brick 1 (Base Garment Inpaint)**:
-   - *Mask*: Bodice, arms, and skirt area.
-   - *Inpaint*: Piece 1 (Anarkali Gown) transferring deep imperial wine maroon faux georgette, vertical sequin pinstripes, half sleeves, and flared 16-kali skirt.
-   - *Result*: Layer 1 (Base Plate + Pure Anarkali).
-3. **Brick 2 (Drape Inpaint on top of Layer 1)**:
-   - *Mask*: Left shoulder down diagonal torso across right hip.
-   - *Inpaint*: Piece 2 (Pre-Draped Cowl Pallu) anchoring at left shoulder, cascading crescent cowl folds, and scalloped bead fringe.
-   - *Result*: Layer 2 (Base Plate + Anarkali + Draped Cowl).
-4. **Brick 3 (Locking Belt Inpaint on top of Layer 2)**:
-   - *Mask*: 1.5-inch waistband bounding band.
-   - *Inpaint*: Piece 3 (Embroidered Kamarbandh Belt) locking the cowl drape cleanly at the natural waistline.
-   - *Result*: Layer 3 (Complete 3-Piece Dressed Ensemble).
-5. **Brick 4 (Necklace Inpaint on top of Layer 3)**:
-   - *Mask*: Virgin neck/collarbone bounding box.
-   - *Inpaint*: Polki / Kundan choker or emerald bib necklace cleanly onto bare skin.
-6. **Brick 5 (Earrings Inpaint on top of Layer 4)**:
-   - *Mask*: Virgin earlobe bounding boxes.
-   - *Inpaint*: Matching antique gold jhumkas or chandelier earrings.
-7. **Brick 6 (Wrists/Bangles Inpaint on top of Layer 5)**:
-   - *Mask*: Forearms and wrists.
-   - *Inpaint*: Traditional kadas, glass bangles, or rings onto anatomically locked fingers.
 
 ---
 
-### 2.4 Engine Model Selection: Open-Source FLUX Inpainting vs Multimodal Gemini/Nano Banana
+### 2.4 Deep Dive: Layer-by-Layer Separation & Independent Editing
 
-#### The Problem with Gemini / Nano Banana for Direct Try-On:
-- While **Gemini / Nano Banana** excels at semantic scene understanding, photorealistic image creation from scratch, ghost mannequin turnaround sheets, and high-level reasoning, **it does not support native pixel-locked binary inpainting out of the box**.
-- When asked to "replace only the dress," multimodal diffusion APIs perform global regeneration or latent perturbation, causing subtle shifts in facial bone structure, ear shape, hair edges, lighting color temperature, or backdrop wrinkles. **This violates the Zero-Drift Law.**
+#### Layer 0: Spatial Framing & Camera Canvas
+- **Role**: Establishes fixed optical coordinates, aspect ratio (`9:16` vertical video/reels, `4:5` Instagram feed, `1:1` e-commerce square), camera angle, and focal length (85mm portrait compression or 50mm natural perspective).
+- **Invariance**: Guarantees consistent model height, horizon line, and floor distance across all catalog angles (Front 0°, 3/4 Turn 45°, Lateral Profile 90°, Back 180°).
 
-#### The Open-Source FLUX Inpainting Engine (`FLUX.1 Fill [dev]`):
-- **Deterministic Pixel Preservation**: FLUX Fill takes the base image, a high-precision binary mask, and text/reference conditioning.
-- **Mathematical 0.0000% Drift**: Every pixel outside the mask is mathematically frozen and preserved bit-for-bit from the original base plate.
-- **Extreme Texture Fidelity**: FLUX.1 Fill's rectified flow transformer architecture synthesizes micro-sequins, sheer georgette drapes, and intricate zari threads that fuse seamlessly at the mask boundary without seamlines or color halos.
+#### Layer 1: Scene & Environmental Context (100% Interchangeable via Inpaint/Outpaint/Relight)
+- **Role**: Provides the atmosphere, architectural objects, furniture props, and lighting physics tailored specifically to showcase the unique craftsmanship, embroidery, and color palette of the garment.
+- **Interchangeable Modes**:
+  1. **High-Fashion Editorial Shoot**: Champagne draped satin/silk backdrops, Roman plaster pedestals, minimalist architectural arches, sculptural floral installations, high-key commercial 3-point softbox studio lighting.
+  2. **Authentic UGC (User-Generated Content)**: Warm sunlit aesthetic bedroom, vanity mirror corner, cozy balcony terrace, festive Diwali/wedding living room with authentic ambient bokeh, or casual urban street-style daylight.
+- **Dynamic Lighting & Color Palette Modulation**:
+  - The scene lighting is dynamically tuned to complement the dress (e.g., golden hour 3200K rim light to accentuate deep maroon and warm zari; crisp 5600K diffused studio light for pastel georgettes).
+- **Independent Modification**:
+  - The background can be completely replaced, expanded (outpainted), or relit (using IC-Light / ControlNet) **without touching a single pixel of the subject, makeup, dress, or jewelry**.
 
-#### The Dual-Engine Synergy:
-- **Nano Banana / Gemini**:
-  - Generates ghost mannequin 4-view turnaround sheets (`4-view-garment-sheet`).
-  - Generates 4-quadrant macro fabric detail sheets (`dual-view-and-quad-details`).
-  - Acts as the Vision QA Inspector evaluating seamlines, drape physics, and color accuracy.
-- **FLUX.1 Fill (In ComfyUI)**:
-  - The deterministic execution engine that applies the atomic Lego bricks (Garment Piece 1 $\rightarrow$ Piece 2 $\rightarrow$ Piece 3 $\rightarrow$ Accessories) onto the canonical SSOT base plate.
+#### Layer 2: The Canonical Subject Plate (Bare-Minimum Universal Canvas)
+- **Role**: Establishes the locked human anatomical foundation (facial bone structure, eye gaze, neutral regal expression, warm olive skin tone, anatomical 5-finger hands).
+- **The "Universal Canvas" Undergarment**:
+  - The model is dressed in a **bare-minimum, seamless, skin-tone neutral slip or strapless bodysuit**.
+  - **Why Bare Minimum?**: Allows the subject to wear **any cut or silhouette of garment imaginable** without clashing underlying fabric boundaries:
+    - Deep plunge necklines, high boat necks, or mandarin collars.
+    - Strapless corsets, spaghetti straps, or cape sleeves.
+    - Completely backless scoop cuts or low latkan tie-backs.
+    - Thigh-high side slits, mini dresses, or floor-pooling 16-kali skirts.
+
+#### Layer 3: Subject Styling & Beauty (Independent Cosmetic/Grooming Layer)
+- **Role**: Allows granular beauty adjustments tailored to the mood of the campaign without altering underlying facial geometry:
+  - **Eye Lenses**: Swap iris tone (deep natural obsidian, honey hazel, soft amber, smoky grey) to match garment aesthetics.
+  - **Hair Dye & Micro-Styling**: Deep raven black, espresso brunette, or auburn balayage; crisp right-side part, textured low bun, or flowing loose waves.
+  - **Makeup Palette**: Winged eyeliner, smoky kohl kajal, champagne gold eyeshadow micro-glitter, lip shade (deep plum, brick red, nude peach), matte vs dewy glass-skin finish.
+- **Independent Modification**: Inpainted strictly within dedicated facial feature masks (eyes, lips, hair) leaving dress and background 100% untouched.
+
+#### Layer 4: Atomic Garment Bricks (The Couture Construction Suite)
+- **Role**: The core garment decomposed into modular, stackable, editable components:
+  - **Brick 4A (Base Garment)**: Bodice, sleeves, kali skirt, and back cutout.
+  - **Brick 4B (Draping Layer)**: Asymmetric pre-draped cowl pallu, pleated dupatta, or cascading cape.
+  - **Brick 4C (Structural Cinch)**: Embroidered waist belt (*kamarbandh*), corset boning, or waistband tassels.
+- **Independent In-Place Editing**:
+  - **Colorway Swapping**: Recolor the maroon georgette to royal emerald or sapphire blue in seconds via masked inpainting.
+  - **Pattern & Zari Modification**: Swap vertical micro-sequin pinstripes to floral botanical embroidery (*buttis*) without re-generating the underlying drape physics.
+  - **Piece Swapping**: Change the drape from a cowl swag to a traditional pleated over-the-shoulder dupatta while retaining the base Anarkali gown completely intact!
+
+#### Layer 5: Fine Jewelry (Independent Adornments)
+- **Role**: Precious jewelry applied strictly onto virgin skin areas without competing with garment fabrics:
+  - **Brick 5A (Neckpiece)**: Polki choker, emerald collar, temple gold rani haar, or bare neck.
+  - **Brick 5B (Earrings)**: Antique gold jhumkas, chandelier drops, pearl studs, or bare ears.
+  - **Brick 5C (Hair/Head Jewelry)**: Maang tikka, matha patti, passas, or decorative hair pins.
+
+#### Layer 6: Accessories & Accents (Complete Fashion Styling)
+- **Role**: Editorial props and finishing fashion accessories:
+  - **Brick 6A (Handwear & Timepieces)**: Gold kadas, glass bangles, luxury chronograph watch, cocktail rings.
+  - **Brick 6B (Handbags & Handhelds)**: Embellished bridal potli, structured minaudière clutch, leather tote.
+  - **Brick 6C (Footwear)**: Zari embroidered mojris, nude block-heel sandals, metallic stilettos.
+
+#### Layer 7: Global Environmental Harmonization & Physics Integration
+- **Role**: The final fusion layer ensuring physical cohesion across all assembled layers:
+  - Cast contact shadows under footwear and skirt hem onto the floor.
+  - Realistic ambient occlusion in fabric folds and necklines.
+  - Dynamic bounce light (radiosity) reflecting dress color onto nearby surfaces and skin.
+  - Natural optical depth of field (DoF) separating subject from background.
+
+---
+
+### 2.5 Multi-Model Technology Stack: Inpaint, Outpaint, Relight & Vision QA
+
+```text
+┌─────────────────────────────────┬───────────────────────────────────────────┐
+│ Function                        │ Primary Technology Engine                 │
+├─────────────────────────────────┼───────────────────────────────────────────┤
+│ Pixel-Locked Layer Inpainting   │ FLUX.1 Fill [dev] (ComfyUI)               │
+│ Scene Outpainting & UGC Expand  │ FLUX.1 Fill + SDXL Outpaint               │
+│ Environment Relighting          │ IC-Light (Consistent lighting transfer)   │
+│ Semantic Mask Extraction        │ Segment Anything 2 (SAM 2) + RMBG         │
+│ Ghost Mannequin & Macro Details │ Gemini / Nano Banana (High-res textures)  │
+│ Editorial Copy & Descriptions   │ Gemini 2.5 Flash / Qwen 2.5 72B           │
+│ Vision QA & Drift Verification  │ Automated Gemini Vision Inspection Gate   │
+└─────────────────────────────────┴───────────────────────────────────────────┘
+```
+
+1. **Why FLUX.1 Fill for Surgical Inpainting**:
+   - Operates strictly within explicit binary masks.
+   - Preserves 100% of unmasked pixels bit-for-bit, guaranteeing **mathematical 0.0000% drift** across identity, scene, and adjacent accessories.
+2. **Why Outpainting & Relighting for UGC / Editorial Switching**:
+   - Outpainting models expand the environment outward to create wide-angle lifestyle context (e.g. converting a studio crop into a full sunlit room or palace terrace).
+   - Relighting models (such as IC-Light) modulate the ambient lighting temperature and shadow direction across the model and dress so they naturally match the new environment.
+3. **Why Gemini / Nano Banana for Macro Assets & Vision QA**:
+   - Multimodal Gemini is utilized where it excels: generating high-resolution ghost mannequin turnarounds, 4-quadrant micro-texture reference sheets (sequin reflections, sheer georgette weave), and acting as an autonomous Vision QA gate to measure zero-drift compliance.
 
 ---
 

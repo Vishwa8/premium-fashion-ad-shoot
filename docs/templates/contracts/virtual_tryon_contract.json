@@ -1,65 +1,76 @@
 {
   "$schema": "https://ayurti.ai/schemas/fashion-prompt-contract.v1.json",
-  "task": "identity_locked_lego_brick_virtual_tryon",
-  "version": "2.0.0",
-  "description": "Unified prompt contract for transferring couture garments and accessories onto canonical influencer base plates with 0.0000% character and scene drift via Lego-Brick atomic inpainting using FLUX.1 Fill.",
-  "role_and_system_directive": "You are an elite virtual try-on fashion technical director. Your objective is to transfer the targeted atomic garment or accessory component onto the locked influencer base plate with absolute zero drift in facial identity, facial expression, skin tone, hairstyle, hand anatomy, and studio environment. Only the exact masked region corresponding to the active layer is modified.",
+  "task": "decoupled_modular_virtual_tryon_and_styling",
+  "version": "3.0.0",
+  "description": "Unified prompt contract for decoupled, multi-layered virtual try-on, UGC/editorial scene switching, beauty adjustments, and accessory styling onto canonical influencer base plates with 0.0000% character and unmasked drift.",
+  "role_and_system_directive": "You are an elite virtual try-on fashion technical director. Your objective is to modify or synthesize the targeted atomic layer while preserving all unmasked layers (facial identity, expression, skin tone, hair anatomy, environment, or adjacent accessories) with mathematical 0.0000% drift.",
+  "decoupled_layer_hierarchy": {
+    "LAYER_0_SPATIAL_FRAMING": "Aspect ratio (9:16 / 4:5 / 1:1), camera angle, focal length (85mm / 50mm), turnaround angle (Front 0° / 3/4 45° / Profile 90° / Back 180°)",
+    "LAYER_1_ENVIRONMENT_SCENE": "Interchangeable scene context (Editorial Studio shoot vs Authentic UGC lifestyle), dynamic lighting setup, and color palette calibrated to garment craftsmanship",
+    "LAYER_2_SUBJECT_BASE_CANVAS": "Locked human anatomical foundation in bare-minimum neutral slip/bodysuit (zero accessories, naked neck/ears/wrists/waist) allowing any garment cut",
+    "LAYER_3_BEAUTY_COSMETICS": "Cosmetic grooming adjustments: eye contact lenses, hair dye color/styling, makeup palette (eyeliner, eyeshadow, lips, skin glow)",
+    "LAYER_4_GARMENT_BRICKS": {
+      "BRICK_4A": "Base Garment (bodice, sleeves, kali skirt, back cutout; editable colors, prints, zari)",
+      "BRICK_4B": "Draping Layer (asymmetric cowl pallu, dupatta, trailing cape, shoulder sash)",
+      "BRICK_4C": "Structural Cinch (embroidered waist belt / kamarbandh / corset band)"
+    },
+    "LAYER_5_FINE_JEWELRY": {
+      "BRICK_5A": "Neckwear (Polki choker, emerald collar, delicate chain, or bare skin)",
+      "BRICK_5B": "Earwear (Antique gold jhumkas, chandelier drops, pearl studs, or bare lobes)",
+      "BRICK_5C": "Head/Hair Jewelry (Maang tikka, matha patti, embellished hair pins)"
+    },
+    "LAYER_6_ACCESSORIES_STYLING": {
+      "BRICK_6A": "Handwear (Gold bangles, kadas, luxury watch, cocktail rings)",
+      "BRICK_6B": "Handhelds (Embellished bridal potli, metallic clutch, leather bag)",
+      "BRICK_6C": "Footwear (Zari embroidered mojris, block-heel sandals, stilettos)"
+    },
+    "LAYER_7_HARMONIZATION": "Physical integration pass: contact shadows, ambient occlusion, bounce light radiosity, optical depth of field"
+  },
   "visual_conditioning_inputs": {
-    "base_influencer_plate": {
+    "base_input_plate": {
       "type": "image",
-      "description": "Canonical high-resolution influencer base image (base_front.png or base_back.png in neutral try-on slip with zero accessories) providing 100% identity, pose, and backdrop ground truth.",
+      "description": "Base input plate containing current assembled state.",
       "priority": 1
     },
     "active_layer_reference": {
       "type": "image",
-      "description": "Isolated component image, assembled master, or accessory reference for the active Lego-brick layer.",
+      "description": "Reference asset for the active layer being synthesized or edited (garment piece, jewelry item, accessory, or scene reference).",
       "priority": 2
     },
-    "active_layer_inpaint_mask": {
+    "active_layer_mask": {
       "type": "mask",
-      "description": "High-precision binary inpainting mask targeting only the active component region (e.g. piece 1 gown, piece 2 cowl pallu, piece 3 waist belt, or jewelry bounding box) while strictly preserving all unmasked pixels.",
+      "description": "Binary inpainting mask targeting strictly the active layer boundary while locking all other pixels.",
       "priority": 3
     }
   },
-  "atomic_lego_layers": {
-    "LAYER_0": "Canonical SSOT Clean Base Plate (base_front.png / base_back.png in neutral slip, 0 accessories)",
-    "BRICK_1": "Base Garment (Floor-length Anarkali Gown bodice, sleeves, kali skirt, back scoop)",
-    "BRICK_2": "Pre-Draped Cowl Pallu / Dupatta (Left shoulder anchor, diagonal sweep, crescent cowl folds, bead droplets)",
-    "BRICK_3": "Embroidered Waist Belt / Kamarbandh (1.5-inch waistband locking cowl drape at waist)",
-    "BRICK_4": "Fine Jewelry - Neck (Polki/Kundan collar or choker on bare collarbones)",
-    "BRICK_5": "Fine Jewelry - Ears (Matching antique gold jhumkas on bare earlobes)",
-    "BRICK_6": "Fine Jewelry - Wrists/Hands (Bangles, kadas, rings on locked hands)",
-    "BRICK_7": "Footwear & Accents (Embellished mojris/sandals, latkans/tassels)"
-  },
   "prompt_template": {
-    "system_prefix": "Use the input image as the absolute identity, body, lighting, and scene ground truth. Modify ONLY the white masked area to apply the specified atomic layer: {{ACTIVE_BRICK_NAME}}.",
-    "character_and_environment_lock": "Preserve the exact same woman, face, skin tone, hair parting (right-side) and textured low bun, neutral expression, eye shape, body proportions, camera angle, champagne pleated silk background, floor drape, and lighting. Unmasked pixels must remain mathematically identical.",
-    "active_layer_transfer_directive": "Synthesize the atomic component seamlessly into the mask: {{ACTIVE_COMPONENT_SPECIFICATIONS}}",
-    "realism_and_boundary_directives": "Flawless physical contact and seam blending at mask boundary, natural textile drape physics, authentic micro-textures (sheer georgette, metallic zari threads, micro-sequins, polished gemstones), zero seam halo, photorealistic commercial luxury catalog asset.",
-    "negative_constraints": "identity drift, facial alteration, skin tone change, loose hair, hair unbundling, background change, lighting shift, mask edge seamlines, floating accessories, duplicate drapes, bilateral drape symmetry, plastic skin, CGI, watermark, text."
+    "system_prefix": "Modify ONLY the white masked area corresponding to {{TARGET_LAYER_ID}}. Keep all unmasked regions (face, skin, hair, background, or other layers) bit-for-bit identical.",
+    "character_and_environment_lock": "Preserve the exact same woman, facial bone structure, warm olive skin tone with natural pores, eye expression, hair bun/parting, and environment. Unmasked pixels must remain 100% frozen.",
+    "active_layer_transfer_directive": "Synthesize or edit the active layer faithfully: {{LAYER_SPECIFICATIONS}}",
+    "realism_and_boundary_directives": "Flawless physical boundary blending, authentic micro-textures (sheer georgette, metallic zari threads, polished gemstones, skin sheen), realistic light falloff, zero seam artifacts, luxury fashion catalog standard.",
+    "negative_constraints": "identity drift, facial morphing, altered skin tone, hair unraveling, unmasked pixel alteration, mask seamline halos, plastic skin, CGI, distorted anatomy, duplicate drapes, floating accessories, watermark, text."
   },
   "template_variables": {
-    "ACTIVE_BRICK_NAME": {
+    "TARGET_LAYER_ID": {
       "type": "string",
       "required": true,
-      "enum": ["BRICK_1_BASE_GOWN", "BRICK_2_COWL_PALLU", "BRICK_3_WAIST_BELT", "BRICK_4_NECKLACE", "BRICK_5_EARRINGS", "BRICK_6_BANGLES", "BRICK_7_FOOTWEAR"],
-      "example": "BRICK_2_COWL_PALLU"
+      "example": "LAYER_4_GARMENT_BRICKS.BRICK_4B"
     },
-    "ACTIVE_COMPONENT_SPECIFICATIONS": {
+    "LAYER_SPECIFICATIONS": {
       "type": "string",
       "required": true,
       "example": "Pre-draped cowl dupatta in sheer imperial wine maroon faux georgette. Pleated sash anchored securely onto the wearer's left shoulder, flowing diagonally across the chest into soft, fluid crescent cowl swags across the wearer's right hip. Scalloped antique gold threadwork along the outer border with micro-pearl bead fringe droplets."
     }
   },
   "three_ws_guidelines": {
-    "what_to_enforce": "Lego-brick sequential inpainting using FLUX.1 Fill; 100% preservation of unmasked base pixels (face, hair, skin, backdrop); zero accessories on Layer 0 base plate.",
-    "when_to_apply": "Applied during every try-on generation to prevent multi-piece entanglement and eliminate identity/scene drift.",
-    "why_and_remediation": "Multimodal models lack native pixel-locked masks and regenerate unmasked pixels; monolithic diffusion hallucinates asymmetrical drapes. FLUX.1 Fill layer-by-layer stacking guarantees mathematical zero drift."
+    "what_to_enforce": "Fully decoupled layer separation. Every layer (scene, model base, cosmetics, dress bricks, jewelry, accessories) can be edited or swapped independently without affecting other layers.",
+    "when_to_apply": "Applied during all virtual try-ons, editorial vs UGC transitions, colorway variations, beauty adjustments, and accessory styling passes.",
+    "why_and_remediation": "Monolithic generation causes context entanglement and destroys cross-catalog brand consistency. Decoupled layer inpainting via FLUX.1 Fill guarantees mathematical 0.0000% unmasked drift."
   },
   "execution_binding": {
-    "engine": "FLUX.1 Fill [dev] via ComfyUI",
-    "inpaint_node": "FluxInpaintModel / KSampler",
-    "mask_expansion": "4px blur / 2px feathering for seamless edge fusion",
-    "auxiliary_reference_engine": "Gemini Nano Banana (for detail sheets, flatlays, and Vision QA)"
+    "inpaint_engine": "FLUX.1 Fill [dev] via ComfyUI (surgical layer synthesis)",
+    "outpaint_relight_engine": "FLUX Fill + IC-Light (UGC/Editorial scene swap and lighting harmonization)",
+    "segmentation_engine": "Segment Anything 2 (SAM 2) + RMBG (semantic mask generation)",
+    "semantic_vision_engine": "Gemini Nano Banana (turnaround sheets, detail macro sheets, Vision QA)"
   }
 }
